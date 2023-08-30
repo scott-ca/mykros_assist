@@ -1,0 +1,143 @@
+version: '3.1'
+
+rules:
+- rule: Create file
+  steps:
+  - intent: create_file
+  - action: action_create_file
+
+- rule: Open file
+  steps:
+  - intent: open_file
+  - action: action_open_file
+
+- rule: Open file explorer
+  steps:
+  - intent: open_file_explorer
+  - action: action_open_file_explorer
+
+- rule: Open browser
+  steps:
+  - intent: open_browser
+  - action: action_open_browser
+
+- rule: Open bookmark
+  steps:
+  - intent: open_bookmark
+  - action: action_open_bookmark
+
+- rule: Open terminal
+  steps:
+  - intent: open_terminal
+  - action: action_open_terminal
+
+- rule: Run terminal
+  steps:
+  - intent: run_terminal
+  - action: action_run_terminal
+
+- rule: List files
+  steps:
+  - intent: list_files
+  - action: action_list_files
+
+- rule: Search google
+  steps:
+  - intent: search_google
+  - action: action_search_google
+
+- rule: Search wiki
+  steps:
+  - intent: search_wiki
+  - action: action_search_wiki
+
+- rule: Search youtube
+  steps:
+  - intent: search_youtube
+  - action: action_search_youtube
+
+- rule: Mute computer
+  steps:
+  - intent: mute_computer
+  - action: action_mute_computer
+
+- rule: Unmute computer
+  steps:
+  - intent: unmute_computer
+  - action: action_unmute_computer
+
+- rule: Create timer
+  steps:
+  - intent: create_timer
+  - action: action_create_timer
+
+- rule: Search file name
+  steps:
+  - intent: search_file_name
+  - action: action_search_file_name
+
+- rule: Search file content
+  steps:
+  - intent: search_file_content
+  - action: action_search_file_content
+
+- rule: Do math
+  steps:
+  - intent: do_math
+  - action: action_do_math
+
+- rule: Define word
+  steps:
+  - intent: define_word
+  - action: action_word_operation
+
+- rule: Antonymize word
+  steps:
+  - intent: antonymize_word
+  - action: action_word_operation
+
+- rule: Synonymize word
+  steps:
+  - intent: synonymize_word
+  - action: action_word_operation
+
+- rule: Hyponymize word
+  steps:
+  - intent: hyponymize_word
+  - action: action_word_operation
+
+- rule: Hypernymize word
+  steps:
+  - intent: hypernymize_word
+  - action: action_word_operation
+
+- rule: Homophonize word
+  steps:
+  - intent: homophonize_word
+  - action: action_word_operation
+
+- rule: Translate webpage
+  steps:
+  - intent: translate_webpage
+  - action: action_translate_webpage
+
+- rule: Close app
+  steps:
+  - intent: close_app
+  - action: action_close_app
+
+- rule: Open app
+  steps:
+  - intent: open_app
+  - action: action_open_app
+
+- rule: Check spelling
+  steps:
+  - intent: check_spelling
+  - action: action_check_spelling
+
+- rule: Compare text
+  steps:
+  - intent: compare_text
+  - action: action_compare_text
+

@@ -1,0 +1,31 @@
+version: "3.1"
+
+nlu:
+
+- intent: search_file_content
+  examples: |
+    - find files containing [report](file_query) in folder [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - search for files that have [error](file_query) messages in [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - locate files that contain the text [important](file_query) keyword at [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - find files with the content [customer details](file_query) [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - show me files that contain [sales report](file_query) [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - search for files in folder [__FSLASH__etc__FSLASH__alsa](folder_query) containing [line of code](file_query)
+    - I want to find files with [product information](file_query) in folder [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - can you find files that have [bug report](file_query) in folder [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - please locate files in folder [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query) that contain [project notes](file_query)
+    - find files that contain the phrase [marketing campaign](file_query) in folder [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - find files containing [report](file_query) in folder [C:__BSLASH__test__BSLASH__](folder_query)
+    - search for files that have [error](file_query) messages in [C:__BSLASH__test__BSLASH__](folder_query)
+    - locate files that contain the text [critical](file_query) keyword at [C:__BSLASH__windows](folder_query)
+    - find files with the content [customer report](file_query) [C:__BSLASH__windows__BSLASH__](folder_query)
+    - show me files that contain [project information](file_query) [C:__BSLASH__test__BSLASH__](folder_query)
+    - search for files in folder [C:__BSLASH__test](folder_query) containing [python](file_query)
+    - I want to find files with [instructions](file_query) in folder [C:__BSLASH__test__BSLASH__](folder_query)
+    - can you find files that have [meeting minutes](file_query) in folder [C:__BSLASH__users__BSLASH__Bill](folder_query)
+    - please locate files in folder [C:__BSLASH__users__BSLASH__ana__BSLASH__](folder_query) that contain [work schedule](file_query)
+    - find files that contain the phrase [recipe](file_query) in folder [C:__BSLASH__users__BSLASH__ana__BSLASH__](folder_query)
+
+- regex: search_file_content_keywords
+  examples: |
+    - find|search|locate|content|phrase|containing|contains|matching
+

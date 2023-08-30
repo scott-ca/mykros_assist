@@ -1,0 +1,37 @@
+version: "3.1"
+
+nlu:
+
+- intent: run_terminal
+  examples: |
+    - run in the terminal [pwd](terminal_command)
+    - execute the command in the terminal [python script.py](terminal_command)
+    - run terminal command [git status](terminal_command)
+    - execute the following command [pwd](terminal_command)
+    - terminal [pwd](terminal_command)
+    - terminal [nvidia-smi](terminal_command)
+    - terminal [echo testing](terminal_command)
+    - run in the terminal [ls -la __FSLASH__var__FSLASH__log](terminal_command)
+    - run this command in the terminal [npm start](terminal_command)
+    - execute the following in the terminal [ls __FSLASH__home__FSLASH__user__FSLASH__documents]
+    - run the terminal [sudo apt-get update](terminal_command)
+    - terminal [nvidia-smi](terminal_command)
+    - terminal [ls](terminal_command)
+    - terminal [pwd](terminal_command)    
+    - terminal [ls -la __FSLASH__var__FSLASH__log](terminal_command)
+    - terminal [du __FSLASH__var__FSLASH__log](terminal_command)
+    - Can you run this terminal command [cat __FSLASH__etc__FSLASH__passwd](terminal_command)
+    - Perform this command [nvidia-smi](terminal_command) in the terminal?
+    - Execute [ls](terminal_command) in terminal
+    - Can you run [ls __FSLASH__etc](terminal_command) in terminal?
+    - Can you execute this command [ps -ef](terminal_command) in terminal?
+
+- regex: terminal_command
+  examples: |
+    - command|execute|terminal\s+(.*)
+
+    
+- regex: run_terminal_keywords
+  examples: |
+    - command|execute|terminal\s+(.*)
+

@@ -1,0 +1,192 @@
+version: "3.1"
+
+nlu:
+
+- intent: define_word
+  examples: |
+    - Can you define a word for me
+    - What is the definition of [apple](define_query)
+    - Define the word [technology](define_query)
+    - Can you explain the meaning of [euphoria](define_query)
+    - What does [resilience](define_query) mean?
+    - Define [serendipity](define_query) for me
+    - I want to know the definition of [benevolent](define_query)
+    - Can you provide the meaning of [perennial](define_query)
+    - What is the definition of the word [indigenous](define_query)?
+    - Explain the term [paradox](define_query) to me
+    - Tell me the meaning of [surreal](define_query)
+    - What does [integrity](define_query) refer to?
+    - Can you define the word [ephemeral](define_query) for me?
+    - Provide the definition of [quintessential](define_query)
+    - What is the meaning of [exquisite](define_query)?
+    - Define the term [enigma](define_query)
+    - What's the definition of [enthusiasm](define_query)?
+    - Can you clarify the meaning of [globalization](define_query)?
+    - Could you define [multiculturalism](define_query)?
+    - Explain the concept of [quantum physics](define_query) to me.
+    - I'd like the definition of [democracy](define_query).
+    - How do you define [introspection](define_query)?
+    - What's the exact meaning of [allegory](define_query)?
+    - Can you tell me what [philanthropy](define_query) is?
+    - Can you define [integrity](define_query)?
+    - Can you define [algorithm](define_query)?
+    - Can you define [cryptography](define_query)?
+    - Can you define [database](define_query)?
+    - Can you define [encryption](define_query)?
+    - Can you define [artificial intelligence](define_query)?
+    - Can you define [neural network](define_query)?
+    - Can you define [machine learning](define_query)?
+    - Can you define [cloud computing](define_query)?
+    - Can you define [internet security](define_query)?
+    - Can you define [parallel computing](define_query)?
+    - Can you define [data analysis](define_query)?
+    - Can you define [algorithm complexity](define_query)?
+    - Can you define [computer architecture](define_query)?
+    - Can you define [data mining](define_query)?
+    - Can you define [responsive design](define_query)?
+    - Can you define [computer hardware](define_query)?
+    - Can you define [software development](define_query)?
+    - Can you define [data visualization](define_query)?
+
+
+- regex: define_word_keywords
+  examples: |
+    - define|definition|explain|what does|term|mean|meaning|clarify
+
+- intent: antonymize_word
+  examples: |
+    - Can you provide antonyms for me?
+    - Can you find the opposite of a word for me?
+    - What are the antonyms of [happy](antonymize_query)?
+    - Give me the opposite of [big](antonymize_query).
+    - What is the antonym for [cold](antonymize_query)?
+    - Find the opposite word for [beautiful](antonymize_query).
+    - Can you give me antonyms of [good](antonymize_query)?
+    - What are the antonyms of [bright](antonymize_query)?
+    - Find me the opposite of [fast](antonymize_query).
+    - Provide antonyms for the word [strong](antonymize_query).
+    - What is the antonym for [love](antonymize_query)?
+    - Give me antonyms of [hard](antonymize_query).
+    - What are the opposite words for [old](antonymize_query)?
+    - Find the antonym of [rich](antonymize_query).
+    - Can you provide the opposite of [happy](antonymize_query)?
+    - Give me antonyms for the term [dark](antonymize_query).
+    - Find me a word that means the opposite of [proactive](antonymize_query).
+    - What's the antonym of [generous](antonymize_query)?
+    - Could you give the opposite of [meticulous](antonymize_query)?
+
+- regex: antonymize_word_keywords
+  examples: |
+    - antonymize|antonym|opposite|reverse|contrary
+
+- intent: synonymize_word
+  examples: |
+    - Can you provide synonyms for me?
+    - What are the synonyms of [happy](synonymize_query)?
+    - Give me other words for [big](synonymize_query).
+    - What is a synonym for [cold](synonymize_query)?
+    - Find similar words for [beautiful](synonymize_query).
+    - Can you give me synonyms of [good](synonymize_query)?
+    - What are the synonyms of [bright](synonymize_query)?
+    - Find me another word for [fast](synonymize_query).
+    - Provide synonyms for the word [strong](synonymize_query).
+    - What is a synonym for [love](synonymize_query)?
+    - Give me synonyms of [hard](synonymize_query).
+    - What are the similar words for [old](synonymize_query)?
+    - Find the synonym of [rich](synonymize_query).
+    - Can you provide a word similar to [happy](synonymize_query)?
+    - Give me synonyms for the term [dark](synonymize_query).
+    - Can you tell me other words for [efficient](synonymize_query)?
+    - What's a synonym for [innovation](synonymize_query)?
+    - Could you give me alternative words for [proactive](synonymize_query)?
+    - What are the related words for [meticulous](synonymize_query)?
+    - Can you find another word for [flourish](synonymize_query)?
+
+- regex: synonymize_word_keywords
+  examples: |
+    - synonym|similar word|alternative word|other words for|alternative words for|related words for|another word|related word
+
+- intent: hyponymize_word
+  examples: |
+    - Can you give me the hyponym of a word for me?
+    - What are the hyponyms of [animal](hyponymize_query)?
+    - Give me examples of hyponyms for [vehicle](hyponymize_query).
+    - What are the specific types of [fruit](hyponymize_query)?
+    - Find the subcategories of [furniture](hyponymize_query).
+    - Can you provide examples of hyponyms for [bird](hyponymize_query)?
+    - Give me specific types of [vegetable](hyponymize_query).
+    - What are the subcategories of [color](hyponymize_query)?
+    - Find examples of hyponyms for the term [insect](hyponymize_query).
+    - Can you give me specific types of [plant](hyponymize_query)?
+    - Provide the subcategories of [occupation](hyponymize_query).
+    - What are the specific types of [food](hyponymize_query)?
+    - Give me examples of hyponyms for the word [building](hyponymize_query).
+    - Find the subcategories of [emotion](hyponymize_query).
+    - Can you provide examples of hyponyms for [tool)(hyponymize_query)?
+    - Give me specific types of [instrument](hyponymize_query).
+    - Can you tell me some types of [alcohol](hyponymize_query)?
+    - What are the hyponyms of [vehicle](hyponymize_query)?
+    - Could you provide examples of [music genre](hyponymize_query)?
+    - What are the specific types of [literature](hyponymize_query)?
+    - Can you give me some subcategories of [dance](hyponymize_query)?
+
+- regex: hyponymize_word_keywords
+  examples: |
+    - hyponym|subcategory|specific type|types of|specific types of|subcategories of|example
+
+- intent: hypernymize_word
+  examples: |
+    - Can you give me the hypernym of a word for me?
+    - What is the hypernym of [cat](hypernymize_query)?
+    - Give me the category of [car](hypernymize_query).
+    - What is the broader term for [apple](hypernymize_query)?
+    - Find the superclass of [dog](hypernymize_query).
+    - Can you provide the higher-level category of [banana](hypernymize_query)?
+    - Give me the overarching term for [table](hypernymize_query).
+    - What is the superclass of [rose](hypernymize_query)?
+    - Find the broader category for [chair](hypernymize_query).
+    - Can you give me the higher-level term for [computer](hypernymize_query)?
+    - Provide the category of [bird](hypernymize_query).
+    - What is the overarching term for [book](hypernymize_query)?
+    - Give me the superclass of [house](hypernymize_query).
+    - Find the broader category for [shirt](hypernymize_query).
+    - Can you provide the higher-level term for [bicycle](hypernymize_query)?
+    - Give me the category of [tree](hypernymize_query).
+    - What is the broader category for [lion](hypernymize_query)?
+    - What is the general term for [rose](hypernymize_query)?
+    - Can you tell me the hypernym of [bicycle](hypernymize_query)?
+    - What is the higher-level category of [apples](hypernymize_query)?
+    - What is the more general term for [apple](hypernymize_query)?
+
+- regex: hypernymize_word_keywords
+  examples: |
+    - hypernym|category|broader term|superclass|higher-level category|overarching term|broader category for|general term for|higher-level category of
+
+- intent: homophonize_word
+  examples: |
+    - Can you give me the homophone for some words?
+    - Give me a homophone for [pear](homophonize_query).
+    - What is the word that sounds like [ball](homophonize_query)?
+    - Find a homonym for [blue](homophonize_query).
+    - Give me a word that is pronounced like [night](homophonize_query).
+    - What is the homophone of [flower](homophonize_query)?
+    - Find a word that sounds like [sail](homophonize_query).
+    - Give me the homonym for [right](homophonize_query).
+    - What is the word that is pronounced like [rose](homophonize_query)?
+    - Find a homophone for [pear](homophonize_query).
+    - Give me a word that sounds like [sale](homophonize_query).
+    - What is the homophone of [write](homophonize_query)?
+    - Find a word that is pronounced like [meet](homophonize_query).
+    - Give me the homonym for [night](homophonize_query).
+    - What is the word that sounds like [piece](homophonize_query)?
+    - Find a homophone for [berry](homophonize_query).
+    - Could you give a homophone for [peak](homophonize_query)?
+    - What's a word that sounds like [sun](homophonize_query)?
+    - Can you tell me a word pronounced like [sea](homophonize_query)?
+    - What is a homophone for [hare](homophonize_query)?
+    - Do you know a word that sounds like [knight](homophonize_query)?
+
+- regex: homophonize_word_keywords
+  examples: |
+    - homophone|sounds like|homonym|pronounced like
+

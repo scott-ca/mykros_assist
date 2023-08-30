@@ -1,0 +1,47 @@
+version: "3.1"
+
+nlu:
+
+- intent: translate_webpage
+  examples: |
+    - Translate a webpage to English for me.
+    - Can you help me translate a website?
+    - I need to translate a webpage into English.
+    - Translate [http:__FSLASH____FSLASH__www.example.co.jp](webpage_translate_query) to English.
+    - Can you provide a translation of [https:__FSLASH____FSLASH__www.example.co.uk](webpage_translate_query)?
+    - I want to read [http:__FSLASH____FSLASH__www.example.co.jp__FSLASH__](webpage_translate_query) in English.
+    - Translate the webpage at [http:__FSLASH____FSLASH__www.example.co.uk__FSLASH__] into English.
+    - Please translate [https:__FSLASH____FSLASH__www.example.com](webpage_translate_query).
+    - I need the English translation of [http:__FSLASH____FSLASH__www.example.com](webpage_translate_query).
+    - Help me translate [http:__FSLASH____FSLASH__www.example.com](webpage_translate_query).
+    - Can you convert [http:__FSLASH____FSLASH__www.example.com](webpage_translate_query) to English?
+    - Change [http:__FSLASH____FSLASH__www.example.com](webpage_translate_query) into English for me.
+    - Could you translate [https:__FSLASH____FSLASH__www.example.com](webpage_translate_query).
+    - I require [http:__FSLASH____FSLASH__www.example.com__FSLASH__](webpage_translate_query) to be translated.
+    - I'd like to see [http:__FSLASH____FSLASH__www.example.com](webpage_translate_query) in English.
+    - Please provide the English version of [http:__FSLASH____FSLASH__www.example.com](webpage_translate_query).
+    - Could you translate the website [http:__FSLASH____FSLASH__www.example.com](webpage_translate_query)?
+    - I need you to translate [https:__FSLASH____FSLASH__www.example.com](webpage_translate_query) into English.
+    - I'd appreciate it if you could translate [http:__FSLASH____FSLASH__www.example.com](webpage_translate_query).
+    - Translate [http:__FSLASH____FSLASH__www.example.com](webpage_translate_query) to English for me.
+    - Assist me in converting [https:__FSLASH____FSLASH__www.example.de](webpage_translate_query) to English.
+    - Can you make [http:__FSLASH____FSLASH__www.example.ca](webpage_translate_query) readable in English?
+    - Please turn [http:__FSLASH____FSLASH__www.example.com__FSLASH__](webpage_translate_query) into English.
+    - Could you translate the webpage [https:__FSLASH____FSLASH__www.example.com](webpage_translate_query)?
+    - I want to translate [http:__FSLASH____FSLASH__www.example.cn](webpage_translate_query) to English.
+    - Make [http:__FSLASH____FSLASH__www.example.com](webpage_translate_query) understandable in English.
+    - Can you provide a version of [http:__FSLASH____FSLASH__www.example.com](webpage_translate_query) in English?
+    - Can you translate the webpage at [https:__FSLASH____FSLASH__www.example.ga](webpage_translate_query) to English?
+    - Please convert the webpage at [http:__FSLASH____FSLASH__www.example.nl](webpage_translate_query).
+    - Help me understand [http:__FSLASH____FSLASH__www.example.cf](webpage_translate_query) by translating it.
+    - Please translate [http:__FSLASH____FSLASH__www.example.com](webpage_translate_query) to English for me.
+    - I would like to translate [https:__FSLASH____FSLASH__www.example.com](webpage_translate_query).
+    - Translate [http:__FSLASH____FSLASH__www.example.com](webpage_translate_query) for me, please.
+    - Can you help me understand [https:__FSLASH____FSLASH__www.example.com](webpage_translate_query) by translating it?
+    - Can translate [https:__FSLASH____FSLASH__www.example.com](webpage_translate_query) for me
+
+
+- regex: translate_webpage_keywords
+  examples: |
+    - translate|convert|webpage|website|URL
+

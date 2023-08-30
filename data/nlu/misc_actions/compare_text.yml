@@ -1,0 +1,26 @@
+version: "3.1"
+
+nlu:
+
+- intent: compare_text
+  examples: |
+    - Compare two texts
+    - Can you find the differences between two texts?
+    - Show me the variations between two texts
+    - Analyze the disparities in two texts
+    - How do these texts differ?
+    - Highlight the dissimilarities between two texts
+    - Perform a text comparison
+    - Show me the distinctions between two texts
+    - Identify the changes in two texts
+    - Compare the content of two texts
+    - Can you check if two texts are the same?
+    - Examine the discrepancies in two texts
+    - Are these two texts similar or different?
+    - Can you find any discrepancies between two texts?
+    - Check if these two texts have any variations
+
+- regex: compare_text_keywords
+  examples: |
+    - compare|differences|difference|different
+

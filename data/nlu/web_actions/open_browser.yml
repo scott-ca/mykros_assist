@@ -1,0 +1,38 @@
+version: "3.1"
+
+nlu:
+
+- intent: open_browser
+  examples: |
+    - open browser
+    - can you open the web browser
+    - open [http:__FSLASH____FSLASH__www.example.com](url)
+    - open [www.google.ca](url)
+    - go to [https:__FSLASH____FSLASH__www.example.com](url)
+    - goto [http:__FSLASH____FSLASH__www.example.com](url)
+    - goto [youtube.com](url)
+    - browse to [https:__FSLASH____FSLASH__www.example.com](url)
+    - visit [http:__FSLASH____FSLASH__www.example.com](url)
+    - check out [https:__FSLASH____FSLASH__www.example.com](url)
+    - load [http:__FSLASH____FSLASH__www.example.com](url)
+    - access [https:__FSLASH____FSLASH__www.example.com](url)
+    - view [http:__FSLASH____FSLASH__www.example.com](url)
+    - goto [google.com](url)
+    - go to [www.reddit.com](url)
+    - [www.example.com](url)
+    - [example.com](url)
+    - [example.ca](url)
+    - [www.example.ca](url)
+    - [https:__FSLASH____FSLASH__www.example.ca](url)
+    - [http:__FSLASH____FSLASH__www.example.org](url)
+    - [http:__FSLASH____FSLASH__www.example.net](url)
+    - [http:__FSLASH____FSLASH__www.example.co.uk](url)
+    - [https:__FSLASH____FSLASH__www.example.de](url)
+    - [http:__FSLASH____FSLASH__www.example.cn](url)
+    - [http:__FSLASH____FSLASH__www.example.ga](url)
+    - [http:__FSLASH____FSLASH__www.example.nl](url)
+    
+- regex: open_browser_keywords
+  examples: |
+    - open|new|tab|browser|window|go|navigate|browse|surf|visit|check|out|load|access|view|reach
+

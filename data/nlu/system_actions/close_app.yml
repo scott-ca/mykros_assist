@@ -1,0 +1,43 @@
+version: "3.1"
+
+nlu:
+- intent: close_app
+  examples: |
+    - Close the application [Chrome](close_app_id).
+    - End the [Notepad](close_app_id) application.
+    - Terminate [Firefox](close_app_id).
+    - Close [Word](close_app_id) program.
+    - Stop [Excel](close_app_id).
+    - Quit [PowerPoint](close_app_id) application.
+    - Close the app [Photoshop](close_app_id).
+    - End the [Visual Studio Code](close_app_id) program.
+    - Terminate [Calculator](close_app_id).
+    - Close the [Zoom](close_app_id) software.
+    - Stop [Skype](close_app_id).
+    - Quit the [Microsoft Teams](close_app_id) program.
+    - Close the app [Spotify](close_app_id).
+    - End [Discord](close_app_id).
+    - Terminate [Steam](close_app_id).
+    - I'm done with [Notepad](close_app_id), you can close it.
+    - Please terminate [Firefox](close_app_id).
+    - Exit the [Word](close_app_id) program.
+    - Can you quit [Excel](close_app_id) for me?
+    - I'm finished with [PowerPoint](close_app_id), please close it.
+    - Terminate [Photoshop](close_app_id) now.
+    - Can we exit [Visual Studio Code](close_app_id)?
+    - Stop [Calculator](close_app_id) now.
+    - Finish the [Zoom](close_app_id) meeting.
+    - Exit the [Skype](close_app_id) application.
+    - Please terminate the [Microsoft Teams](close_app_id) program.
+    - I'm finished with [Spotify](close_app_id), please close it.
+    - Can you quit [Discord](close_app_id)?
+    - I'm done playing [Steam](close_app_id), please exit the app.
+
+- regex: close_app_keywords
+  examples: |
+    - close|end|terminate|stop|quit|software|application|program
+
+- regex: close_app_id
+  examples: |
+    - nonwords_flag|Google|Facebook
+

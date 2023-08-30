@@ -1,0 +1,48 @@
+version: "3.1"
+
+nlu:
+
+- intent: open_app
+  examples: |
+    - Can you open some software for me?
+    - Open [Chrome](open_app_id).
+    - Open [Chrome](open_app_id) application.
+    - Launch [Notepad](open_app_id).
+    - Start [Firefox](open_app_id) application.
+    - Open [Word](open_app_id) program.
+    - Run [Excel](open_app_id).
+    - Start [PowerPoint application.
+    - Open the app [Photoshop](open_app_id).
+    - Launch [Visual Studio Code](open_app_id) program.
+    - Start [Calculator](open_app_id) app.
+    - Open [Zoom](open_app_id) software.
+    - Run [Skype](open_app_id).
+    - Launch the [Microsoft Teams](open_app_id) program.
+    - Open the app [Spotify](open_app_id).
+    - Start [Discord](open_app_id) software.
+    - Run [Steam](open_app_id).
+    - Can you please launch [Chrome](open_app_id)?
+    - Start the [Notepad](open_app_id) application.
+    - Bring up [Firefox](open_app_id).
+    - Initiate [Word](open_app_id) program.
+    - I'd like to start using [Excel](open_app_id).
+    - Can you open up [PowerPoint](open_app_id)?
+    - Launch the [Photoshop](open_app_id) app.
+    - I need to use [Visual Studio Code](open_app_id).
+    - Open [Calculator](open_app_id) for me.
+    - Start [Zoom](open_app_id) for my meeting.
+    - I need to call someone on [Skype](open_app_id).
+    - Can you bring up my [Microsoft Teams](open_app_id) program?
+    - I want to listen to [Spotify](open_app_id).
+    - Can you open [Discord](open_app_id) for me?
+    - I want to play a game on [Steam](open_app_id).
+    - Can you open [Steam])(open_app_id)
+
+- regex: open_app_keywords
+  examples: |
+    - open|launch|start|run|app|software|application|program
+
+- regex: open_app_id
+  examples: |
+    - nonwords_flag|Google|Facebook
+

@@ -1,0 +1,31 @@
+version: "3.1"
+
+nlu:
+- intent: open_file_explorer
+  examples: |
+    - Open the file explorer in folder 
+    - Launch the file browser
+    - Open file explorer
+    - Launch file explorer
+    - I need to open the file explorer
+    - access the file explorer
+    - Can you launch the file explorer
+    - Open the file explorer at [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - Launch the file browser in folder [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - Open file explorer at folder [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - Launch file explorer in [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - I need to open the file explorer [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - access the file explorer [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - Can you launch the file explorer [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - Open the file explorer at [C:__BSLASH__test__BSLASH__ana__BSLASH__](folder_query)
+    - Launch the file browser in folder [C:__BSLASH__test__BSLASH__Bill__BSLASH__](folder_query)
+    - Open file explorer at folder [C:__BSLASH__Users__BSLASH__Bill__BSLASH__](folder_query)
+    - Launch file explorer in [C:__BSLASH__Users__BSLASH__Bill](folder_query)
+    - I need to open the file explorer [C:__BSLASH__test__BSLASH__Bill__BSLASH__](folder_query)
+    - access the file explorer [C:__BSLASH__test__BSLASH__Bill__BSLASH__](folder_query)
+    - Can you launch the file explorer [C:__BSLASH__test__BSLASH__Bill__BSLASH__](folder_query)
+
+- regex: open_file_explorer_keywords
+  examples: |
+    - open|file|explorer|launch|browser
+

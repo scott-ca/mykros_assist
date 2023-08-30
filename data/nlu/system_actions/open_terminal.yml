@@ -1,0 +1,20 @@
+version: "3.1"
+
+nlu:
+
+- intent: open_terminal
+  examples: |
+    - Open a terminal window
+    - Start the terminal
+    - Terminal
+    - Launch the terminal
+    - Can you open a terminal window?
+    - Launch a terminal window
+    - Can you start a terminal session?
+    - Open a new terminal session
+    - Boot up a terminal window
+
+- regex: open_terminal_keywords
+  examples: |
+    - open|terminal|window|start
+

@@ -1,0 +1,41 @@
+version: "3.1"
+
+nlu:
+
+- intent: create_file
+  examples: |
+    - create a file called [__FSLASH__home__FSLASH__ana__FSLASH__test.txt](create_file_path)
+    - make a new file named [__FSLASH__home__FSLASH__ana__FSLASH__notes.md](create_file_path)
+    - create a new file [__FSLASH__home__FSLASH__ana__FSLASH__report.pdf](create_file_path)
+    - generate a file [__FSLASH__home__FSLASH__ana__FSLASH__data.csv](create_file_path)
+    - make a file called [__FSLASH__home__FSLASH__ana__FSLASH__items.docx](create_file_path)
+    - create a file named [__FSLASH__home__FSLASH__ana__FSLASH__schedule.xlsx](create_file_path)
+    - I want to create a file [C:__BSLASH__test__BSLASH__ana__BSLASH__budget.ods](create_file_path)
+    - can you create a file [C:__BSLASH__test__BSLASH__ana__BSLASH__report.pdf](create_file_path) for me
+    - please create a file [C:__BSLASH__test__BSLASH__ana__BSLASH__homework.docx](create_file_path)
+    - create a new file with the name [C:__BSLASH__test__BSLASH__ana__BSLASH__project_overview.pdf](create_file_path)
+    - create a file [C:__BSLASH__test__BSLASH__ana__BSLASH__invoice.pdf](create_file_path) for client XYZ
+    - make a new file called [C:__BSLASH__test__BSLASH__ana__BSLASH__budget.xlsx](create_file_path) for next quarter
+    - generate a report [C:__BSLASH__test__BSLASH__ana__BSLASH__sales_report.pdf](create_file_path) for the month of March
+    - create a file named [__FSLASH__home__FSLASH__ana__FSLASH__todo.txt](create_file_path) for my task list
+    - create a new file with the name [__FSLASH__home__FSLASH__ana__FSLASH__presentation.pptx](create_file_path) for the meeting
+    - can you make a [__FSLASH__home__FSLASH__ana__FSLASH__file contacts.csv](create_file_path) with customer contact information?
+    - I need to create a file [__FSLASH__home__FSLASH__ana__FSLASH__inventory.xlsx](create_file_path) for my products.
+    - could you make a file [__FSLASH__home__FSLASH__ana__FSLASH__outline.txt](create_file_path)
+    - can you create a file [C:__BSLASH__test__BSLASH__ana__BSLASH__report.pdf](create_file_path) for me from the [imported](create_file_import) data
+    - can you make a [__FSLASH__home__FSLASH__ana__FSLASH__file contacts.csv](create_file_path) with [imported](create_file_import) contact information
+    - can you create a file [C:__BSLASH__test__BSLASH__ana__BSLASH__report.pdf](create_file_path) for me and [export](create_file_export) the file
+    - can you make a [__FSLASH__home__FSLASH__ana__FSLASH__file contacts.csv](create_file_path) with customer contact information and [export](create_file_export) it
+
+- regex: create_file_keywords
+  examples: |
+    - create|file|called|named|new|make|generate
+
+- regex: create_file_import
+  examples: |
+    - import|imported
+
+- regex: create_file_export
+  examples: |
+    - export|exported
+

@@ -1,0 +1,63 @@
+version: "3.1"
+
+nlu:
+
+- intent: open_bookmark
+  examples: |
+    - can you open a bookmark
+    - [firefox bookmark](browser) [google.ca](bookmark_query)
+    - [brave bookmark](browser) [google.ca](bookmark_query)
+    - [bookmark](browser) [google.ca](bookmark_query)
+    - [brave bookmark](browser) [amazon](bookmark_query)
+    - [firefox bookmark](browser) [amazon](bookmark_query)
+    - [bookmark](browser) [amazon](bookmark_query)        
+    - [bookmark](browser) [google](bookmark_query)
+    - [brave bookmark](browser) [google](bookmark_query)
+    - [firefox bookmark](browser) [google](bookmark_query)
+    - [bookmark](browser) [youtube](bookmark_query)
+    - [firefox bookmark](browser) [youtube](bookmark_query)
+    - [brave bookmark](browser) [youtube](bookmark_query)
+    - can you open [bookmark](browser) [how to build a website](bookmark_query)
+    - can you open [firefox bookmark](browser) [how to build a website](bookmark_query)
+    - can you open [brave bookmark](browser) [how to build a website](bookmark_query)
+    - [brave bookmark](browser) [how to create a zip file](bookmark_query)
+    - [firefox bookmark](browser) [how to create a zip file](bookmark_query)
+    - [bookmark](browser) [how to create a zip file](bookmark_query)
+    - [firefox bookmark](browser) [how to bake a ckae](bookmark_query)
+    - [brave bookmark](browser) [what color is the sky](bookmark_query)
+    - [bookmark](browser) [different dog breeds](bookmark_query)
+    - [firefox bookmark](browser) [best pizza in town](bookmark_query)
+    - can you open [how to bake a cake](bookmark_query) [brave bookmark](browser)
+    - [bookmark](browser) [strawberries](bookmark_query)
+    - open [travel destinations in Europe](bookmark_query) [firefox bookmark](browser)?
+    - open [travel destinations in Europe](bookmark_query) [bookmark](browser)?
+    - open [travel destinations in Europe](bookmark_query) [brave bookmark](browser)?
+    - open [firefox bookmark](browser) [BBC news](bookmark_query)
+    - access [brave bookmark](browser) [stack overflow](bookmark_query)
+    - launch [bookmark](browser) [google maps](bookmark_query)
+    - open [brave bookmark](browser) [the weather channel](bookmark_query)
+    - start [firefox bookmark](browser) [gmail](bookmark_query)
+    - open [bookmark](browser) [linkedin](bookmark_query)
+    - can you open my [bookmark](browser) [twitter](bookmark_query)
+    - can you access [firefox bookmark](browser) [netflix](bookmark_query)
+    - can you launch [brave bookmark](browser) [amazon prime](bookmark_query)
+    - load [brave bookmark](browser) [how to code in python](bookmark_query)
+    - open [firefox bookmark](browser) [how to make pasta](bookmark_query)
+    - load [bookmark](browser) [how to write a cover letter](bookmark_query)
+    - can you open my [firefox bookmark](browser) [cats and dogs](bookmark_query)
+    - open [brave bookmark [history of ancient Rome](bookmark_query)
+    - launch [bookmark [funny cat videos](bookmark_query)
+    - can you open the [best books to read](bookmark_query) [firefox bookmark](browser)
+    - access [brave bookmark](browser) [popular podcasts](bookmark_query)
+    - load [wildlife photography](bookmark_query) [firefox bookmark](browser)?
+    - open [best mobile apps of 2023](bookmark_query) [bookmark](browser)?
+    - open [interesting science facts](bookmark_query) [brave bookmark](browser)?
+  
+- regex: browser
+  examples: |
+    - bookmark|firefox bookmark|brave bookmark|edge bookmark
+    
+- regex: open_bookmark_keywords
+  examples: |
+    - bookmark|firefox bookmark|brave bookmark|edge bookmark
+

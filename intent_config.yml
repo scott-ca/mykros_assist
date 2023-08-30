@@ -1,0 +1,174 @@
+DEBUG_MODE:
+  action: action_debug
+  summary: Used to test or debug actions.
+  details: This intent is used to test or debug actions.
+  enabled: false
+
+create_file:
+  action: action_create_file
+  summary: Create a new file.
+  details: This intent is used to create a new file in the current directory.
+  enabled: true
+  
+open_file:
+  action: action_open_file
+  summary: Open a file.
+  details: This intent is used to open a file given the file and the respective file path.
+  enabled: true
+
+open_file_explorer:
+  action: action_open_file_explorer
+  summary: Open the file explorer.
+  details: This intent is used to open the file explorer to browse and navigate through files and folders.
+  enabled: true
+
+open_browser:
+  action: action_open_browser
+  summary: Open a web browser to a specific url.
+  details: This intent is used to open a web browser to visit a specified URL.
+  enabled: true
+
+open_bookmark:
+  action: action_open_bookmark
+  summary: Open a bookmarked website.
+  details: This intent is used to open a bookmarked website in the web browser. You can also specify your browser, if none is specified it will check your default browser. Currently supports Firefox and Brave.
+  enabled: true
+
+open_terminal:
+  action: action_open_terminal
+  summary: Open the terminal/command prompt.
+  details: This intent is used to open the a blank terminal or command prompt.
+  enabled: true
+
+run_terminal:
+  action: action_run_terminal
+  summary: Run a command in the terminal/command prompt.
+  details: This intent is used to run a specified command in the terminal or command prompt. If possible the results from the command are displayed within the chat window. If it is a gui application that would be run within the terminal then it will instead open terminal and automatically run the command
+  enabled: true
+
+list_files:
+  action: action_list_files
+  summary: List the files in a directory.
+  details: This intent is used to list the files in a specified directory.
+  enabled: true
+
+search_google:
+  action: action_search_google
+  summary: Perform a Google search.
+  details: This intent is used to perform a search on Google and retrieve search results.
+  enabled: true
+
+search_wiki:
+  action: action_search_wiki
+  summary: Search for information on Wikipedia.
+  details: This intent is used to search for information on Wikipedia and retrieve relevant articles.
+  enabled: true
+
+search_youtube:
+  action: action_search_youtube
+  summary: Search for videos on YouTube.
+  details: This intent is used to search for videos on YouTube and retrieve relevant videos.
+  enabled: true
+
+mute_computer:
+  action: action_mute_computer
+  summary: Mute the computer's audio.
+  details: This intent is used to mute the audio output of the computer.
+  enabled: true
+
+unmute_computer:
+  action: action_unmute_computer
+  summary: Unmute the computer's audio.
+  details: This intent is used to unmute the audio output of the computer.
+  enabled: true
+
+create_timer:
+  action: action_create_timer
+  summary: Create a timer.
+  details: This intent is used to create a timer with a specified duration. It will accept input in any variation of seconds, minutes, or hours.
+  enabled: true
+
+search_file_name:
+  action: action_search_file_name
+  summary: Search for files by name.
+  details: This intent is used to search for files in a directory based on their filenames.
+  enabled: true
+
+search_file_content:
+  action: action_search_file_content
+  summary: Search for files by content.
+  details: This intent is used to search the content of the files in a directory for your search term.
+  enabled: true
+
+do_math:
+  action: action_do_math
+  summary: Perform mathematical calculations.
+  details: This intent is used to perform various mathematical calculations, such as addition, subtraction, multiplication, division, percentages, and more.
+  enabled: true
+
+define_word:
+  action: action_word_operation
+  summary: Define a word.
+  details: This intent is used to get the definition of a specific word.
+  enabled: true
+
+antonymize_word:
+  action: action_word_operation
+  summary: Get the antonym(opposite) of a word.
+  details: This intent is used to get the antonym (opposite) of a specific word. An antonym is a word that has the opposite meaning to the given word.
+  enabled: true
+
+synonymize_word:
+  action: action_word_operation
+  summary: Get the synonym(similar) of a word.
+  details: This intent is used to get the synonym (similar) of a specific word. A synonym is a word that has the same or similar meaning to the given word.
+  enabled: true
+
+hyponymize_word:
+  action: action_word_operation
+  summary: Get the hyponym(specific category) of a word.
+  details: This intent is used to get the hyponym (specific category) of a specific word. A hyponym is a word that belongs to a specific category or is a more specific term than the given word.
+  enabled: true
+
+hypernymize_word:
+  action: action_word_operation
+  summary: Get the hypernym(general category) of a word.
+  details: This intent is used to get the hypernym (general category) of a specific word. A hypernym is a word that represents a general category or is a more general term than the given word.
+  enabled: true
+
+homophonize_word:
+  action: action_word_operation
+  summary: Get the homophone(sound-alike) of a word.
+  details: This intent is used to get the homophone (sound-alike word) of a specific word. A homophone is a word that sounds the same but has a different meaning and spelling than the given word.
+  enabled: true
+
+translate_webpage:
+  action: action_translate_webpage
+  summary: Translates webpages
+  details: This intent is used to Translate a webpage using Google Translate.
+  enabled: true
+
+close_app:
+  action: action_close_app
+  summary: Closes applications
+  details: This intent is used to close applications. It will check the running processes for partial matches to your request.
+  enabled: true
+
+open_app:
+  action: action_open_app
+  summary: Opens applications
+  details: This intent is used to open applications. It will check the running processes for partial matches to your request.
+  enabled: true
+
+check_spelling:
+  action: action_check_spelling
+  summary: Checks spelling of words
+  details: This intent checks the spelling of words. This is run locally and doesn't connect to the internet to perform the check.
+  enabled: true
+
+compare_text:
+  action: action_compare_text
+  summary: Compares text
+  details: This intent compares two sets of text. This function is launched in it's own window where it will prompt for the text and show the differences.
+  enabled: true
+

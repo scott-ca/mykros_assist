@@ -1,0 +1,50 @@
+version: "3.1"
+
+nlu:
+
+- intent: search_file_name
+  examples: |
+    - find file with name [test.txt](file_query) in [__FSLASH__home__FSLASH__bill__FSLASH__](folder_query)
+    - find file with name [tes](file_query) in folder [__FSLASH__home__FSLASH__bill__FSLASH__](folder_query)
+    - search for a file named [notes.md](file_query) at [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - search for a file named [note](file_query) in [__FSLASH__home__FSLASH__ana](folder_query)
+    - locate file [report.pdf](file_query) [__FSLASH__dev__FSLASH__](folder_query)
+    - locate file [rep](file_query) in folder [__FSLASH__dev__FSLASH__](folder_query)
+    - search for a file called [messages.txt](file_query) in folder [__FSLASH__home__FSLASH__bill__FSLASH__](folder_query)
+    - find file [data.csv](file_query) in [__FSLASH__dev__FSLASH__](folder_query)
+    - find file [dat](file_query) at [__FSLASH__mnt__FSLASH__](folder_query)
+    - show me files with the name [items.docx](file_query) in [__FSLASH__mnt__FSLASH__](folder_query)
+    - show me files with the name [items](file_query) [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - search for file named [schedule.xlsx](file_query) in folder [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - search for file named [sched](file_query) at folder [__FSLASH__home__FSLASH__ana](folder_query)
+    - I want to find a file called [budget](file_query) in [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - I want to find a file called [budget.ods](file_query) at [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - can you find a file named [shopping_list.txt](file_query) in folder
+    - can you find a file named [shopping](file_query) [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - please locate file named [homework.docx](file_query) in [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - please locate file named [hom](file_query) [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - find file [project_overview.pdf](file_query) in folder [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - find file [project](file_query) in [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - in folder [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query) find file [project](file_query)
+    - in folder [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query) find file [project.txt](file_query)
+    - find file with name [annual_report.pdf](file_query) in [FSLASH__home__FSLASH__ana__FSLASH](folder_query)
+    - search for a file named [invoice.docx](file_query) at [FSLASH__home__FSLASH__bill__FSLASH](folder_query)
+    - locate file [family_photo.jpg](file_query) in [FSLASH__pictures__FSLASH](folder_query)
+    - find file [presentation.pptx](file_query) at [FSLASH__work__FSLASH](folder_query)
+    - search for file named [contract.pdf](file_query) in folder [FSLASH__work__FSLASH__ana__FSLASH](folder_query)
+    - please locate file named [hom](file_query) [C:__BSLASH__users__BSLASH__ana](folder_query)
+    - find file [project_overview.pdf](file_query) in folder [C:__BSLASH__test__BSLASH__](folder_query)
+    - find file [project](file_query) in [C:__BSLASH__users__BSLASH__test__BSLASH__](folder_query)
+    - in folder [C:__BSLASH__windows](folder_query) find file [project](file_query)
+    - in folder [C:__BSLASH__users__BSLASH__ana__BSLASH__](folder_query) find file [project.txt](file_query)
+    - find file with name [annual_report.pdf](file_query) in [C:__BSLASH__users__BSLASH__ana__BSLASH__](folder_query)
+    - search for a file named [invoice.docx](file_query) at [C:__BSLASH__users__BSLASH__ana__BSLASH__](folder_query)
+    - locate file [family_photo.jpg](file_query) in [C:__BSLASH__windows__BSLASH__](folder_query)
+    - find file [presentation.pptx](file_query) at [C:__BSLASH__users__BSLASH__ana](folder_query)
+    - search for file named [contract.pdf](file_query) in folder [C:__BSLASH__users__BSLASH__ana__BSLASH__](folder_query)
+
+
+- regex: search_file_name_keywords
+  examples: |
+    - find|search|locate|name|file|named|called
+

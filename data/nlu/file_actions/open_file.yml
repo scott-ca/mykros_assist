@@ -1,0 +1,29 @@
+version: "3.1"
+
+nlu:
+
+- intent: open_file
+  examples: |
+    - Can you open a file for me
+    - Can you open a file
+    - Can access file [__FSLASH__home__FSLASH__ana__FSLASH__example.txt](file_path)
+    - Open the file at [__FSLASH__home__FSLASH__ana__FSLASH__report.pdf](file_path)
+    - Open file at [__FSLASH__home__FSLASH__ana__FSLASH__example.txt__FSLASH__](file_path)
+    - I need to open the file [__FSLASH__home__FSLASH__ana__FSLASH__report.pdf__FSLASH__](file_path)
+    - access the file [__FSLASH__home__FSLASH__ana__FSLASH__report.pdf__FSLASH__](file_path)
+    - Open the file at [C:__BSLASH__test__BSLASH__ana__BSLASH__report.pdf__BSLASH__](file_path)
+    - Open file at [C:__BSLASH__Users__BSLASH__Bill__BSLASH__report.pdf](file_path)
+    - I need to open the file at [C:__BSLASH__test__BSLASH__Bill__BSLASH__report.pdf__BSLASH__](file_path)
+    - Can you open file at [C:__BSLASH__Users__BSLASH__Bill__BSLASH__report.pdf](file_path)
+    - Can you open the [import](open_file_import) file
+    - I need to open the [imported](open_file_import) document
+
+
+- regex: open_file_keywords
+  examples: |
+    - open|file
+
+- regex: open_file_import
+  examples: |
+    - import|imported
+

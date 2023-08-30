@@ -1,0 +1,46 @@
+version: "3.1"
+
+nlu:
+
+- intent: list_files
+  examples: |
+    - Show me the files in this folder
+    - List the files here
+    - Display the files in the current folder
+    - Can you show me the files
+    - List the contents of this directory
+    - Display the files in the current directory
+    - Show me the list of files
+    - Show me everything in the current folder
+    - Can you list the files in the directory
+    - Can you list the files in the current directory.
+    - Can you list the files in the current folder.
+    - Can you list the files in the folder.
+    - Show me the files in this folder [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - List the files at [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - Can you show me the files in folder [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - List the contents in folder [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - Display the files in [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - Show me the list of files in folder [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - Show me everything in [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - Can you list the files in the directory [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - Can you list the files in the folder [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query).
+    - Show me the files in this folder [__FSLASH__home__FSLASH__ana__FSLASH__](folder_query)
+    - List the files at [C:__BSLASH__Users__BSLASH__Bill__BSLASH__](folder_query)
+    - Can you show me the files in folder [C:__BSLASH__Test__BSLASH__](folder_query)
+    - List the contents in folder C:__BSLASH__Users__BSLASH__Bill__BSLASH__](folder_query)
+    - Display the files in [C:__BSLASH__Users__BSLASH__Bill](folder_query)
+    - Show me the list of files in folder [C:__BSLASH__test__BSLASH__Bill__BSLASH__](folder_query)
+    - Show me everything in [C:__BSLASH__test__BSLASH__Bill__BSLASH__](folder_query)
+    - Can you list the files in the directory [C:__BSLASH__test__BSLASH__Bill__BSLASH__](folder_query)
+    - Can you list the files in the folder [C:__BSLASH__test__BSLASH__Bill__BSLASH__](folder_query)
+    - Can you list the files in the folder [C:__BSLASH__test__BSLASH__Bill__BSLASH__](folder_query) and [export](list_files_export) the list
+    - List the contents of folder C:__BSLASH__Users__BSLASH__Bill__BSLASH__](folder_query) and [export](list_files_export) the information
+
+- regex: list_files_keywords
+  examples: |
+    - show|files|list|display|folder
+
+- regex: list_files_export
+  examples: |
+    - export|exported

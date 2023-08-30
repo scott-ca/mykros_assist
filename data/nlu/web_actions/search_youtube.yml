@@ -1,0 +1,69 @@
+version: "3.1"
+
+nlu:
+
+- intent: search_youtube
+  examples: |
+    - search youtube for [how to play guitar](youtube_query)
+    - look up [funny cat videos](youtube_query) on youtube
+    - youtube [makeup tutorials](youtube_query)
+    - find [yoga workout videos](youtube_query) on youtube
+    - what are the top [music videos of all time](youtube_query) on youtube?
+    - watch [Jurassic Park trailer](youtube_query) on youtube
+    - find [new recipe videos](youtube_query) on youtube
+    - youtube [gaming channels](youtube_query)
+    - search youtube for [travel vlogs](youtube_query)
+    - look up [dance tutorial](youtube_query) videos on youtube
+    - what are the [top music](youtube_query) videos of the week on youtube?
+    - show me [TED Talks](youtube_query) on youtube
+    - youtube [movie trailers](youtube_query)
+    - can you youtube [How to install windows](youtube_query)?
+    - can you look up [rock songs](youtube_query) on youtube?
+    - browse [funny videos](youtube_query) on youtube
+    - find [live concert recordings](youtube_query) on youtube
+    - watch [DIY videos](youtube_query) on youtube
+    - search youtube for [news clips](youtube_query)
+    - search youtube for [photography lessons](youtube_query)
+    - look up [3D animation tutorials](youtube_query) on youtube
+    - youtube [documentaries about nature](youtube_query)
+    - find [stand up comedy](youtube_query) on youtube
+    - what are the [most popular sports highlights](youtube_query) on youtube?
+    - watch [concert performances](youtube_query) on youtube
+    - find [cooking demonstrations](youtube_query) on youtube
+    - youtube [rocket launch](youtube_query) videos
+    - search youtube for [magic tricks](youtube_query)
+    - look up [guided meditation](youtube_query) videos on youtube
+    - Can you show me [DIY gardening projects](youtube_query) on youtube?
+    - Search for [Olympic highlights](youtube_query) on youtube
+    - Find [Python programming tutorials](youtube_query) on youtube
+    - Locate [car repair guides](youtube_query) on youtube
+    - Display [origami making videos](youtube_query) on youtube
+    - Look for [piano lessons](youtube_query) on youtube
+    - Pull up [famous speeches](youtube_query) on youtube
+    - Show [late-night show clips](youtube_query) on youtube
+    - Search youtube for [digital painting classes](youtube_query)
+    - Retrieve [science documentaries](youtube_query) on youtube
+    - Bring up [product review videos](youtube_query) on youtube
+    - Locate [workout plans](youtube_query) on youtube
+    - Show me [healthy cooking recipes](youtube_query) on youtube
+    - Search for [best movie scenes](youtube_query) on youtube
+    - Can you find [motivational talks](youtube_query) on youtube?
+    - Search youtube for [behind the scenes movie clips](youtube_query)
+    - Look for [wildlife documentaries](youtube_query) on youtube
+    - Can you pull up [virtual tours of museums](youtube_query) on youtube?
+    - Search for [SpaceX launches](youtube_query) on youtube
+    - Find [Photoshop tutorials](youtube_query) on youtube
+    - Look up [book summaries](youtube_query) on youtube
+    - Retrieve [language learning videos](youtube_query) on youtube
+    - Search youtube for [tech gadget unboxing](youtube_query)
+    - Find [animated short films](youtube_query) on youtube
+    - Display [historical documentaries](youtube_query) on youtube
+    - Search for [vegan recipe demonstrations](youtube_query) on youtube
+    - Pull up [ballet performances](youtube_query) on youtube
+    - Search youtube for [astronomy lectures](youtube_query)
+    - Look for [drawing and sketching tutorials](youtube_query) on youtube
+    
+- regex: search_youtube_keywords
+  examples: |
+    - youtube|look up|search|find|lookup
+

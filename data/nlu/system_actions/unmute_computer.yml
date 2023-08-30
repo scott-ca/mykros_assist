@@ -1,0 +1,18 @@
+version: "3.1"
+
+nlu:
+
+- intent: unmute_computer
+  examples: |
+    - unmute the computer
+    - turn on sound
+    - unmute
+    - can you unmute my computer
+    - turn on the volume
+    - can you turn on the volume
+    - I want to unmute the audio
+
+- regex: unmute_computer_keywords
+  examples: |
+    - unmute|volume
+

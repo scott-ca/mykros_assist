@@ -1,0 +1,113 @@
+version: "3.1"
+
+intents:
+  - DEBUG_MODE
+  - create_file
+  - open_file
+  - open_file_explorer
+  - open_browser
+  - open_terminal
+  - list_files
+  - search_google
+  - search_wiki
+  - search_youtube
+  - run_terminal
+  - mute_computer
+  - unmute_computer
+  - open_bookmark
+  - create_timer
+  - search_file_name
+  - search_file_content
+  - do_math  
+  - define_word
+  - antonymize_word
+  - synonymize_word
+  - hyponymize_word
+  - hypernymize_word
+  - homophonize_word
+  - translate_webpage
+  - close_app
+  - open_app
+  - check_spelling
+  - compare_text
+
+actions:
+  - action_debug
+  - action_list_files
+  - action_create_file
+  - action_open_file
+  - action_open_file_explorer
+  - action_open_browser
+  - action_open_terminal
+  - action_search_google
+  - action_search_wiki
+  - action_search_youtube
+  - action_run_terminal
+  - action_mute_computer
+  - action_unmute_computer
+  - action_open_bookmark
+  - action_create_timer
+  - action_search_file_name
+  - action_search_file_content
+  - action_do_math
+  - action_define_word
+  - action_word_operation
+  - action_antonymize_word
+  - action_synonymize_word
+  - action_hyponymize_word
+  - action_hypernymize_word
+  - action_homophonize_word
+  - action_translate_webpage
+  - action_close_app
+  - action_open_app
+  - action_check_spelling
+  - action_compare_text
+  
+entities:
+  - create_file_path
+  - create_file_export:
+      values:
+        - export
+        - exported
+  - create_file_import:
+      values:
+        - import
+        - imported
+  - file_path
+  - list_files_export:
+      values:
+        - export
+        - exported
+  - url
+  - google_query
+  - wiki_query
+  - youtube_query
+  - browser_url_form
+  - inform_file_name
+  - terminal_command
+  - bookmark_query
+  - browser:
+      values:
+        - bookmark
+        - firefox bookmark
+        - brave bookmark
+        - edge bookmark
+  - timer
+  - file_query
+  - folder_query
+  - math_expression
+  - define_query
+  - antonymize_query
+  - synonymize_query
+  - hyponymize_query
+  - hypernymize_query
+  - homophonize_query
+  - webpage_translate_query
+  - close_app_id
+  - open_app_id
+  - misspelled_word
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+

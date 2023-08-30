@@ -1,0 +1,40 @@
+conflict_groups:
+  - name: App actions
+    intents:
+      - open_app
+      - close_app
+  - name: Mute computer actions
+    intents:
+      - mute_computer
+      - unmute_computer
+  - name: Search and open actions
+    intents:
+      - open_browser
+      - search_google
+      - search_wiki
+      - search_youtube
+      - search_file_name
+      - search_file_content
+      - translate_webpage
+      - create_file
+      - open_file
+  - name: Terminal actions
+    intents:
+      - open_terminal
+      - run_terminal
+  - name: Open actions
+    intents:
+      - open_file
+      - open_file_explorer
+      - open_app
+      - open_terminal      
+      - open_browser  
+  - name: File Actions
+    intents:
+      - search_file_name
+      - search_file_content
+      - open_file
+      - open_file_explorer
+      - list_files
+      - create_file
+

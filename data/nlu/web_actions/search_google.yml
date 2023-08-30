@@ -1,0 +1,36 @@
+version: "3.1"
+
+nlu:
+
+- intent: search_google
+  examples: |
+    - google [can dogs eat strawberries](google_query)
+    - google [how to build a website](google_query)
+    - google [how to create a zip file](google_query)
+    - google [how to bake a ckae](google_query)
+    - google [what color is the sky](google_query)
+    - google [different dog breeds](google_query)
+    - search google for [best pizza in town](google_query)
+    - look up [how to bake a cake](google_query) on google
+    - google [funny cat videos](google_query)
+    - what are the top [travel destinations in Europe](google_query) according to google?
+    - google [what is the capital of France](google_query)
+    - search google [for how to make pizza dough](google_query)
+    - find [best budget smartphones](google_query) on google
+    - look up [top movies of 2022](google_query) on google
+    - google [how to use Python's built-in function](google_query)
+    - what are the [most popular programming languages according](google_query) to google?
+    - search google [for healthy breakfast ideas](google_query)
+    - look up [how to grow tomatoes in pots](google_query) on google
+    - google [funny dog videos](google_query)
+    - what are the [top tech gadgets](google_query) on google?
+    - Look on google for [how to grow plants indoors](google_query)
+    - Search google for [best workout routines](google_query)
+    - Search [how to cook pasta](google_query) on google
+    - Look up [weather in New York](google_query) on google
+    - Find [the best restaurants in San Francisco](google_query) on google
+
+- regex: search_google_keywords
+  examples: |
+    - google|search|look up|find|lookup
+

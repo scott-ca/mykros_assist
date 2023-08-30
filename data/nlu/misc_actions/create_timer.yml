@@ -1,0 +1,33 @@
+version: "3.1"
+
+nlu:
+
+- intent: create_timer
+  examples: |
+    - can you create a timer  
+    - set a timer for [30 minutes](timer)
+    - create a timer for [2 hours and 15 minutes](timer)
+    - start a timer for [45 seconds](timer)
+    - set a timer for [1 hour, 30 minutes, and 10 seconds](timer)
+    - start a [5 minute](timer) timer
+    - create a timer for [20 seconds](timer)
+    - set a [2 hour](timer) timer
+    - set a timer for [5 minutes](timer)
+    - create a timer for [1 hour and 30 minutes](timer)
+    - start a timer for [10 seconds](timer)
+    - can you create a timer for [2 hours](timer)?
+    - set a countdown for [30 minutes](timer)
+    - please start a timer for [1 minute and 45 seconds](timer)
+    - can you create a timer for [3 hours and 15 minutes](timer)?
+    - start a countdown for [20 minutes](timer)
+    - set an alarm for [7 hours and 30 minutes](timer)
+    - create a timer for [45 seconds](timer)
+    - please start a timer for [1 hour](timer)
+    - can you set a timer for [2 minutes and 30 seconds](timer)?
+    - start a countdown for [10 minutes](timer)
+    - create an alarm for [5 hours and 45 minutes](timer)
+    
+- regex: create_timer_keywords
+  examples: |
+    - set a timer|create timer|start timer|countdown|countdown timer|start countdown
+

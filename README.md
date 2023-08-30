@@ -373,7 +373,7 @@ The layout and structure is similar to other python functions you may create. Yo
 def template_execution(output_widget, entities, chat_prompt, shared_data, os_name, working_action):
 
 
-### Variable
+### Variables
 
 All of the variables shown in the function header are passed into the function are optional. You can omit any of the variables not needed. However, the order is important for any that you do need and should match the order in the template. 
 
@@ -495,7 +495,6 @@ Similarly, if you wish to uninstall a library from the portable environment you 
 Next we need to create the training data. 
 
 You will find a folder called data in the main directory, which contains a subfolder called nlu. Inside the nlu folder, there are 5 subfolders file_actions, misc_actions, system_actions, web_actions, word_actions. You should create a yml file that matches your intent name (for example, template_intent.yml) in the subfolder that best aligns with your custom action. The yml file is where the training data is stored along along with any custom regex should it be required.
-
 
 A large amount of training data is not required. Typically, you have around 20 examples. However, the number of examples can vary depending on the diversity of triggers for the intent. For instance, the mute_computer intent uses only 7 examples, while open_bookmark has 47 examples. While requesting your computer to be muted is a simple request, opening the bookmark has multiple pieces of data that need to be extracted and thus requires more examples.
 

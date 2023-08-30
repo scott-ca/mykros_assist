@@ -1,0 +1,53 @@
+version: "3.1"
+
+nlu:
+
+- intent: search_wiki
+  examples: |
+    - wiki [world war II](wiki_query)
+    - wiki [Anne Perry](wiki_query)
+    - wiki [deaths in 2023](wiki_query)
+    - wiki [Keanu Reeves](wiki_query)
+    - wiki [lord of the rings](wiki_query)
+    - wiki [dog breeds](wiki_query)
+    - search wiki for [wind instrument](wiki_query)
+    - look up [cat breeds](wiki_query) on wiki
+    - wiki [Penguin Books](wiki_query)
+    - wikipedia [world war II](wiki_query)
+    - wikipedia [Anne Perry](wiki_query)
+    - wikipedia [deaths in 2023](wiki_query)
+    - wikipedia [Keanu Reeves](wiki_query)
+    - wikipedia [lord of the rings](wiki_query)
+    - wikipedia [dog breeds](wiki_query)
+    - Can you search wiki for [history of the internet](wiki_query)
+    - Can you search wiki [history of the internet](wiki_query)
+    - search wikipedia for [wind instrument](wiki_query)
+    - look up [cat breeds](wiki_query) on wikipedia
+    - wikipedia [Penguin Books](wiki_query)
+    - wiki [Albert Einstein's life](wiki_query)
+    - wiki [Global warming](wiki_query)
+    - wikipedia [COVID-19 pandemic](wiki_query)
+    - look up [Buddhism](wiki_query) on wiki
+    - search wiki for [Electric cars](wiki_query)
+    - wikipedia [Neil Armstrong](wiki_query)
+    - wiki [Thomas Edison](wiki_query)
+    - wiki [history of the internet](wiki_query)
+    - search wiki for [Leonardo da Vinci](wiki_query)
+    - look up [Mona Lisa](wiki_query) on wiki
+    - wiki [Solar System](wiki_query)
+    - wikipedia [Maya civilization](wiki_query)
+    - search wikipedia for [Python programming language](wiki_query)
+    - look up [French Revolution](wiki_query) on wikipedia
+    - wikipedia [James Bond](wiki_query)
+    - wikipedia [climate change](wiki_query)
+    - look up [human evolution](wiki_query) on wiki
+    - search wiki for [Eiffel Tower](wiki_query)
+    - wikipedia [Usain Bolt](wiki_query)
+    - Can you search wiki for [rainforests](wiki_query)
+    - Can you search wiki [rainforests](wiki_query)
+    - wiki for [dog breeds](wiki_query)
+
+- regex: search_wiki_keywords
+  examples: |
+    - wiki|search|look up|find|lookup|wikipedia
+

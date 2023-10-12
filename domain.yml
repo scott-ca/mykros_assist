@@ -30,6 +30,7 @@ intents:
   - open_app
   - check_spelling
   - compare_text
+  - convert_units
 
 actions:
   - action_debug
@@ -62,6 +63,7 @@ actions:
   - action_open_app
   - action_check_spelling
   - action_compare_text
+  - action_convert_units
   
 entities:
   - create_file_path
@@ -106,6 +108,9 @@ entities:
   - close_app_id
   - open_app_id
   - misspelled_word
+  - unit_amount
+  - from_unit
+  - to_unit
 
 session_config:
   session_expiration_time: 60

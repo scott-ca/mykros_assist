@@ -141,3 +141,8 @@ rules:
   - intent: compare_text
   - action: action_compare_text
 
+- rule: Convert units
+  steps:
+  - intent: convert_units
+  - action: action_convert_units
+

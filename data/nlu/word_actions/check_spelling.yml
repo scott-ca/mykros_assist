@@ -24,10 +24,12 @@ nlu:
     - Could you clarify the spelling of [seperate](misspelled_word)?
     - How do you spell [definately](misspelled_word) correctly?
     - I'm not sure of the spelling of [existance](misspelled_word). Can you help?
+    - Can you spellcheck [existance](misspelled_word)?
+    - can you spell check [existance](misspelled_word)?
 
 - regex: check_spelling_keywords
   examples: |
-    - check|spelling|spell|spelled|misspelled
+    - check|spelling|spell|spelled|misspelled|spell check|spellcheck
 
 - regex: misspelled_word
   examples: |

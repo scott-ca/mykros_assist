@@ -1,0 +1,87 @@
+version: "3.1"
+
+nlu:
+
+- intent: convert_units
+  examples: |
+    - Convert [5](unit_amount) [miles](from_unit) to [kilometers](to_unit).
+    - How many [kilometers](to_unit) is [5](unit_amount) [miles](from_unit).
+    - Convert [3](unit_amount) [liters](from_unit) to [gallons](to_unit)?
+    - How many [gallons](to_unit) is [3](unit_amount) [liters](from_unit)?
+    - Change [100](unit_amount) [feet](from_unit) into [meters](to_unit).
+    - How many [kilograms](to_unit) is [200](unit_amount) [pounds](from_unit)?
+    - Can you convert [15](unit_amount) [celsius](from_unit) to [fahrenheit](to_unit)?
+    - What is [50](unit_amount) [inches](from_unit) in [centimeters](to_unit)?
+    - Convert [20](unit_amount) [km__FSLASH__h](from_unit) into [miles__FSLASH__hour](to_unit).
+    - I have [2](unit_amount) [gallons](from_unit). How much is that in [liters](to_unit)?
+    - Change [75](unit_amount) [grams](from_unit) to [ounces](to_unit)
+    - How much is [4](unit_amount) [yards](from_unit) in [meters](to_unit)?
+    - How much is [300](unit_amount) [mg](from_unit) in [g](to_unit)?
+    - Can you change [5000](unit_amount) [mm](from_unit) to [m](to_unit)?
+    - How many [mm](from_unit) are in [5000](unit_amount)[m](to_unit)?
+    - Convert [7](unit_amount) [kilometers](from_unit) to [miles](to_unit).
+    - How much is [150](unit_amount) [cm](from_unit) in [meters](to_unit)?
+    - What's [20](unit_amount) [C](from_unit) in [Fahrenheit](to_unit)?
+    - What's [__DASH__20](unit_amount) [celcius](from_unit) in [F](to_unit)?
+    - What's [20](unit_amount) [celcius](from_unit) in [F](to_unit)?
+    - What's [__DASH__20](unit_amount) [C](from_unit) in [Fahrenheit](to_unit)?
+    - Can you convert [__DASH__40](unit_amount) [F](from_unit) in [C](to_unit)?
+    - What's [__DASH__20](unit_amount) [Fahrenheit](from_unit) in [celcius](to_unit)?
+    - Can you convert [1000](unit_amount) [micrograms](from_unit) to [milligrams](to_unit)?
+    - How many [milligrams](to_unit) are in [1000](unit_amount) [micrograms](from_unit)?
+    - How much is [25](unit_amount) [lb](from_unit) in [kg](to_unit)?
+    - Convert [120](unit_amount) [fahrenheit](from_unit) to [celsius](to_unit).
+    - Convert [__DASH__120](unit_amount) [fahrenheit](from_unit) to [celsius](to_unit).
+    - How many [liters](to_unit) is [5](unit_amount) [quarts](from_unit)?
+    - What is [200](unit_amount) [cubic centimeters](from_unit) in [liters](to_unit)?
+    - Convert [10](unit_amount) [hectares](from_unit) to [acres](to_unit).
+    - How many [meters](to_unit) are in [5](unit_amount) [yards](from_unit)?
+    - Can you convert [10](unit_amount) [minutes](from_unit) to [seconds](to_unit)
+    - How many [minutes](to_unit) are in [5](unit_amount) [hours](from_unit)?
+    - Convert [20](unit_amount) [Fahrenheit](from_unit) to [Celsius](to_unit).
+    - In [kilograms](to_unit), how heavy is [150](unit_amount) [pounds](from_unit)?
+    - Can you change [200](unit_amount) [Celsius](from_unit) to [Fahrenheit](to_unit)?
+    - What is [75](unit_amount) [liters](from_unit) converted to [gallons](to_unit)?
+    - How much is [60](unit_amount) [mph](from_unit) in [kph](to_unit)?
+    - How many [kilometers](to_unit) in [60](unit_amount) [meters](from_unit)?
+    - What is [120](unit_amount) [ounces](from_unit) in [grams](to_unit)?
+    - Change [300](unit_amount) [yards](from_unit) to [meters](to_unit)
+    - How many [kilograms](to_unit) is [100](unit_amount) [pounds](from_unit)?
+    - How much is [4](unit_amount) [miles](from_unit) in [kilometers](to_unit)?
+    - How many [gallons](to_unit) is [50](unit_amount) [liters](from_unit)?
+    - What are [15](unit_amount) [inches](from_unit) in [centimeters](to_unit)?
+    - Convert [7](unit_amount) [acres](from_unit) to [hectares](to_unit)
+    - How much is [25](unit_amount) [mm](from_unit) in [inches](to_unit)?
+    - What's [55](unit_amount) [F](from_unit) in [Celsius](to_unit)?
+    - What's [60](unit_amount) [kilometers](from_unit) in [miles](to_unit)?
+    - Convert [10](unit_amount) [meters](from_unit) into [yards](to_unit).
+    - What is [450](unit_amount) [grams](from_unit) in [pounds](to_unit)?
+    - Can you change [30](unit_amount) [celsius](from_unit) to [Fahrenheit](to_unit)?
+    - Convert [100](unit_amount) [miles/hour](from_unit) to [km/h](to_unit).
+    - How many [liters](to_unit) is [3](unit_amount) [gallons](from_unit)?
+    - How much is [5](unit_amount) [yards](from_unit) in [feet](to_unit)?
+    - What's [20](unit_amount) [F](from_unit) in [Celsius](to_unit)?
+    - How many [meters](to_unit) are in [23](unit_amount) [yards](from_unit)?
+    - How many [feet](to_unit) are in [120](unit_amount) [inches](from_unit)?
+    - Can you convert [15](unit_amount) [mm](from_unit) to [inches](to_unit)?
+    - How much is [200](unit_amount) [cm](from_unit) in [meters](to_unit)?
+    - How many [ounces](to_unit) is [5](unit_amount) [grams](from_unit)?
+    - What is [500](unit_amount) [mg](from_unit) in [grams](to_unit)?
+    - Convert [7](unit_amount) [miles](from_unit) to [km](to_unit)
+    - What's [120](unit_amount) [C](from_unit) in [Fahrenheit](to_unit)?
+    - Convert [20](unit_amount) [kph](from_unit) into [miles__FSLASH__hour](to_unit).
+    - I have [2](unit_amount) [liters](from_unit). How much is that in [quarts](to_unit)?
+    - Change [75](unit_amount) [pounds](from_unit) to [kilograms](to_unit).
+    - How many [grams](to_unit) is [4](unit_amount) [pounds](from_unit)?
+    - What is [35](unit_amount) [hectares](from_unit) in [acres](to_unit)?
+    - Convert [10](unit_amount) [F](from_unit) to [Celsius](to_unit).
+    - How much is [300](unit_amount) [mg](from_unit) in [g](to_unit)?
+    - Can you change [5000](unit_amount) [m](from_unit) to [km](to_unit)?
+    - Convert [7](unit_amount) [gallons](from_unit) to [liters](to_unit).
+    - How much is [150](unit_amount) [meters](from_unit) in [yards](to_unit)?
+    - What's [2](unit_amount) [km](from_unit) in [miles](to_unit)?
+    - Can you convert [1000](unit_amount) [micrograms](from_unit) to [milligrams](to_unit)
+
+- regex:  convert_units_keywords
+  examples: |
+    - convert|units

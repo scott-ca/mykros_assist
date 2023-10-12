@@ -54,7 +54,7 @@ def intent_help(message, intent_info, output_widget):
     
     if intent_name == "general" or intent_name in intent_info:
         if intent_name == "general":
-            output_widget.append('You can speak conversationally with the AI to complete various tasks'
+            output_widget.append('You can speak conversationally with the AI to complete various tasks.'
             'For example you could type "Can you open my firefox bookmark banking" and it will launch your browser to the url in that bookmark.'
             'For more information on a specific intent type /help followed by the intent name IE. /help list do_math'
             'Please see the list of avalible intents and a brief description of what they do.\n')
@@ -74,6 +74,9 @@ def find_nonwords(user_input):
     words = user_input.split()
     nonwords = []
     for word in words:
+        # Skip the word "spellchecker" or "spellcheck"
+        if word.lower() == "spellchecker" or word.lower() == "spellcheck":
+            continue
         if not spell.correction(word) == word:
             nonwords.append(word)
     return nonwords

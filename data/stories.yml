@@ -59,4 +59,6 @@ stories:
   - action: action_check_spelling
   - intent: compare_text
   - action: action_compare_text
+  - intent: convert_units
+  - action: action_convert_units
 

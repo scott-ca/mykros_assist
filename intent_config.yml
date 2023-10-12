@@ -172,3 +172,8 @@ compare_text:
   details: This intent compares two sets of text. This function is launched in it's own window where it will prompt for the text and show the differences.
   enabled: true
 
+convert_units:
+  action: action_convert_units
+  summary: Converts various units of measurement
+  details: This intent converts various units of measurement. This supports various types of measurement including length, mass, time, temperature, volume, frequency, and more. This is run locally and doesn't connect to the internet to perform the operation.
+  enabled: true

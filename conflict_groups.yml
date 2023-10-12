@@ -37,4 +37,8 @@ conflict_groups:
       - open_file_explorer
       - list_files
       - create_file
+  - name: Time
+    intents:
+      - convert_units
+      - create_timer
 

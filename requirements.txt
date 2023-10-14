@@ -16,3 +16,4 @@ pywin32; sys_platform == 'win32'
 #Custom actions
 wordhoard==1.5.4
 Pint==0.22
+argostranslate==1.8.3

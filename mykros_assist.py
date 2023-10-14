@@ -13,7 +13,6 @@ logging.basicConfig(level=logging.DEBUG)
 # TODO: Add privacy-focused features that can handle non-private tasks.
 # TODO: List all functionalities that require internet access and explain when and why it connects.
 
-
 app = QApplication([])
 app.setQuitOnLastWindowClosed(False)
 

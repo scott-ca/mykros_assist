@@ -18,7 +18,7 @@ nlu:
     - How much is [4](unit_amount) [yards](from_unit) in [meters](to_unit)?
     - How much is [300](unit_amount) [mg](from_unit) in [g](to_unit)?
     - Can you change [5000](unit_amount) [mm](from_unit) to [m](to_unit)?
-    - How many [mm](from_unit) are in [5000](unit_amount)[m](to_unit)?
+    - How many [mm](from_unit) are in [5000](unit_amount) [m](to_unit)?
     - Convert [7](unit_amount) [kilometers](from_unit) to [miles](to_unit).
     - How much is [150](unit_amount) [cm](from_unit) in [meters](to_unit)?
     - What's [20](unit_amount) [C](from_unit) in [Fahrenheit](to_unit)?

@@ -7,6 +7,7 @@ nlu:
     - Can you open a file for me
     - Can you open a file
     - Can access file [__FSLASH__home__FSLASH__ana__FSLASH__example.txt](file_path)
+    - Can you open a file called [__FSLASH__home__FSLASH__ana__FSLASH__example.txt](file_path)
     - Open the file at [__FSLASH__home__FSLASH__ana__FSLASH__report.pdf](file_path)
     - Open file at [__FSLASH__home__FSLASH__ana__FSLASH__example.txt__FSLASH__](file_path)
     - I need to open the file [__FSLASH__home__FSLASH__ana__FSLASH__report.pdf__FSLASH__](file_path)

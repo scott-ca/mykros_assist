@@ -41,4 +41,7 @@ conflict_groups:
     intents:
       - convert_units
       - create_timer
-
+  - name: Translation
+    intents:
+      - translate_webpage
+      - translate_words

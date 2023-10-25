@@ -28,7 +28,7 @@ nlu:
 
 - regex: terminal_command
   examples: |
-    - command|execute|terminal\s+(.*)
+    - (?<=terminal\s).*
 
     
 - regex: run_terminal_keywords

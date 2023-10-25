@@ -177,3 +177,9 @@ convert_units:
   summary: Converts various units of measurement
   details: This intent converts various units of measurement. This supports various types of measurement including length, mass, time, temperature, volume, frequency, and more. This is run locally and doesn't connect to the internet to perform the operation.
   enabled: true
+
+translate_words:
+  action: action_translate_words
+  summary: Converts words or phrases from one language to another.
+  details: Converts words or phrases from one language to another. This is run locally and doesn't connect to the internet to perform the operation beyond downloading the language model.
+  enabled: true

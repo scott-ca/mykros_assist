@@ -13,6 +13,7 @@
 * [Adding custom actions](#adding-custom-actions)
 * [License](#license)
 
+List of the most recent changes and updates can be found in the [CHANGELOG](https://github.com/scott-ca/mykros_assist/blob/main/CHANGELOG.MD)
 
 ## Summary
 
@@ -437,14 +438,25 @@ The list of supported languages are below as well as in the settings.yml file.
 
 "Arabic": "ar", "Azerbaijani": "az", "Catalan": "ca", "Chinese": "zh", "Czech": "cs", "Danish": "da", "Dutch": "nl", "English": "en", # "Esperanto": "eo", "Finnish": "fi", "French": "fr", "German": "de", "Greek": "el", "Hebrew": "he", "Hindi": "hi", "Hungarian": "hu", "Indonesian": "id", "Irish": "ga", "Italian": "it", "Japanese": "ja", "Korean": "ko", "Persian": "fa", "Polish": "pl", "Portuguese": "pt", "Russian": "ru", "Slovak": "sk", "Spanish": "es", "Swedish": "sv", "Turkish": "tr", "Ukrainian": "uk"
 
-When translation functionality is enabled, it will download the model automatically when you input any text. The models are specific to that language combination, for example English to French, and are stored in the translation_models folder and approximately 100-200 MB. Internet connectivity is only required to download the model, and not used while utilizing the model.
+When translation functionality is enabled, it will download the model automatically when you input any text. The models are specific to that language combination, for example English to French, and are stored in the translation_models folder and approximately 100MB. Internet connectivity is only required to download the model, and not used while utilizing the model.
 
 In addition, it will automatically utilize an intermediate language if one is installed. For example, if you have the es->en and en->fr models downloaded then you are able to translate from es->fr as if you had that direct model installed. This allows for translating between a larger variety of languages at the cost of minimal loss of quality.
 
 The files are be automatically downloaded from [argosopentech](https://www.argosopentech.com/argospm/index/). 
 
-Please note, the automatic downloading of the models only works for the direct translations. If you are utilizing an intermediate language then you will need to have it previously installed , or manually trigger it downloading the model by setting the target and source languages including the intermediate language and then inputting any text into the assistant so that it downloads that model and then repeat the process for the other model. At which time you can then set the from_language and to_language accordingly and it will automatically use the intermediate language. This would only be a one time process, and only is needed if you don't wish to use a model for the translation directly as that would automatically download.
+While no action is required from the developer to have this feature supported, even within their custom action, they do have the option to directly use the feature within their custom action should they so choose. This may be useful should they wish to have the default be in another language, or integrate general translation features. IE. The custom action translate_words in Mykros Assist uses this functionality to translate words or phrases for users without them needing to convert their entire input to find out the translation of a word or phrase.
 
+They would just need to include the below import
+
+'''
+from util.translator import translate_custom
+'''
+
+Once they import the module, they will only need to call the translate_custom function and provide the text to be translated and the 2 character code for the from and to languages.
+
+'''
+translate_custom(word_translate_query, custom_from_code, custom_to_code)
+'''
 
 &nbsp;
 
@@ -712,7 +724,7 @@ Below is the optional entity configuration.
 ```
 - regex: terminal_command
   examples: |
-    - command|execute|terminal\s+(.*)
+    - (?<=terminal\s).*
 ```
 ###Adds the non_word_flag to an entity. When enabled for an entity then if no entity is detected in the initial input, the intent that is the closest that uses the entity will assign the closest non-word. This is useful for detection of non-word names which are often used for company names or names of software**
 

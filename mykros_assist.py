@@ -21,8 +21,10 @@ main_window = MainWindow()
 # Create the menu.
 menu = QMenu()
 show_action = QAction('Show', triggered=main_window.show_chat_prompt)
+about_action = QAction('About', triggered=main_window.show_about)
 quit_action = QAction('Quit', triggered=app.quit)
 menu.addAction(show_action)
+menu.addAction(about_action)
 menu.addAction(quit_action)
 
 # Add the menu to the tray icon.

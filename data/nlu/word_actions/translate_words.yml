@@ -1,0 +1,136 @@
+version: "3.1"
+
+nlu:
+
+- intent: translate_words
+  examples: |
+    - Translate a some text for me.
+    - Can you help me translate a phrase?
+    - I need to translate some words into [English](custom_to_language).
+    - Translate [Can I have some water](word_translate_query) from [Hungarian](custom_from_language) to [English](custom_to_language)
+    - Translate [Can I have some water](word_translate_query) from [English](custom_from_language) to [Hungarian](custom_to_language)
+    - Translate [Can I have some water](word_translate_query) into [Arabic](custom_to_language)
+    - Translate [Can I have some water](word_translate_query) to [Arabic](custom_to_language)
+    - Translate this [Spanish](custom_from_language) phrase [Can I have some water](word_translate_query).
+    - Can you provide a translation of [that is great to hear](word_translate_query) from [French](custom_from_language) to [English](custom_to_language)?
+    - Can you provide a translation of [that is great to hear](word_translate_query) from [English](custom_from_language) to [French](custom_to_language)?
+    - How do you say [cat](word_translate_query) in [greek](custom_to_language).
+    - Translate the phrase [red is very red and blue is not even close to green](word_translate_query) into [German](custom_to_language).
+    - Please translate the [french](custom_from_language) phrase [would you like to go to the pool today](word_translate_query) into [Italian](custom_to_language).
+    - Please translate the [Italian](custom_from_language) phrase [would you like to go to the pool today](word_translate_query) into [french](custom_to_language).
+    - I need the [Finnish](custom_to_language) translation of [Let us dance like there is no tomorrow](word_translate_query).
+    - Help me translate [Which is brighter there sun or the moon](word_translate_query) into [Czech](custom_to_language).
+    - Can you translate [How is the weather today](word_translate_query) to [English](custom_to_language)?
+    - Can you translate [How is the weather today](word_translate_query) from [spanish](custom_from_language) to [English](custom_to_language)?
+    - What does [where would you like to eat](word_translate_query) mean in [English](custom_to_language).
+    - Can you translate [What is your favourite movie](word_translate_query) from [Dutch](custom_from_language) to [Dutch](custom_to_language)?
+    - Can you translate [What is your favourite movie](word_translate_query) from [English](custom_from_language) to [Dutch](custom_to_language)?
+    - Could you translate [should we go out to eat tonight](word_translate_query) from [Czech](custom_from_language) into [Indonesian](custom_to_language).
+    - Could you translate [should we go out to eat tonight](word_translate_query) from [Indonesian](custom_from_language) into [Indonesian](custom_to_language).
+    - I require [what would you recommended](word_translate_query) to be translated into [Slovak](custom_to_language).
+    - I'd like to see [What is your favourite movie](word_translate_query) in [English](custom_to_language).
+    - Please provide the [Turkish](custom_to_language) version of [water](word_translate_query).
+    - Could you translate the phrase [moon](word_translate_query) into [Korean](custom_to_language) from [Japanese](custom_from_language)?
+    - Could you translate the phrase [moon](word_translate_query) into [Korean](custom_to_language) from [Korean](custom_from_language)?
+    - I need you to translate [green](word_translate_query) into [Irish](custom_to_language).
+    - I'd appreciate it if you could translate [Which would you prefer](word_translate_query) from [english](custom_from_language) into [Japanese](custom_to_language).
+    - Translate [good morning](word_translate_query) from [english](custom_from_language) to [hindi](custom_to_language) for me.
+    - Translate [good morning](word_translate_query) from [hindi](custom_from_language) to [english](custom_to_language) for me.
+    - Assist me in converting [How much wood could a woodchuck if a wood chuck could chuck wood](word_translate_query) from [Japanese](custom_from_language) to [Persian](custom_to_language).
+    - Assist me in converting [How much wood could a woodchuck if a wood chuck could chuck wood](word_translate_query) from [Persian](custom_from_language) to [Persian](custom_to_language).
+    - Can you make [do you like pizza](word_translate_query) readable in [Dutch](custom_to_language)?
+    - Please turn [Do you prefer cats or dogs](word_translate_query) from [german](custom_from_language) into [german](custom_to_language).
+    - Please turn [Do you prefer cats or dogs](word_translate_query) from [Irish](custom_from_language) into [german](custom_to_language).
+    - How to say [I am learning](word_translate_query) in [Ukrainian](custom_to_language)?
+    - Could you help me translate [Where is the nearest hotel](word_translate_query) to [Arabic](custom_to_language)?
+    - What is the [Spanish](custom_to_language) word for [apple](word_translate_query)?
+    - Show me how to write [I am a vegetarian](word_translate_query) in [Chinese](custom_to_language).
+    - Translate the sentence [I will travel tomorrow](word_translate_query) into [Portuguese](custom_to_language).
+    - How do you translate [I love this song](word_translate_query) into [Swedish](custom_to_language)?
+    - I need a [Japanese](custom_to_language) translation for [How much does it cost](word_translate_query).
+    - How do you say [I am hungry](word_translate_query) in [chinese](custom_to_language)?
+    - Can you translate [Where is the nearest restroom](word_translate_query) into [portuguese](custom_to_language)?
+    - I need [I am lost](word_translate_query) translated from [english](custom_from_language) to [russian](custom_to_language).
+    - Translate [I will be late](word_translate_query) to [french](custom_to_language) for me, please.
+    - Could you help me translate [I need a doctor](word_translate_query) to [german](custom_to_language)?
+    - I want to translate [I am home](word_translate_query) from [English](custom_from_language) to [japanese](custom_to_language).
+    - How to say [I need a taxi](word_translate_query) in [japanese](custom_to_language)?
+    - Please translate [I dont understand](word_translate_query) from [english](custom_from_language) to [italian](custom_to_language).
+    - Can you provide the [arabic](custom_to_language) version of [I am not interested](word_translate_query)?
+    - How do you translate [Its too expensive](word_translate_query) into [dutch](custom_to_language)?
+    - I need a translation of [I missed my flight](word_translate_query) into [korean](custom_to_language).
+    - What is the [korean](custom_to_language) translation of [I missed my flight](word_translate_query).
+    - Translate [Where is the train station](word_translate_query) from [english](custom_from_language) to [hindi](custom_to_language).
+    - How would you say [I lost my passport](word_translate_query) in [swedish](custom_to_language)?
+    - I need to translate [I would like to check out](word_translate_query) to [turkish](custom_to_language).
+    - Could you translate [Where can I rent a car](word_translate_query) to [spanish](custom_to_language) for me?
+    - Provide a [Polish](custom_to_language) translation for [I need to make a phone call](word_translate_query).
+    - Translate [I will return soon](word_translate_query) from [english](custom_from_language) to [japanese](custom_to_language).
+    - How do you say [good night](word_translate_query) in [french](custom_to_language) from [english](custom_from_language)?
+    - Could you translate [Where can I find a good restaurant](word_translate_query) from [english](custom_from_language) to [spanish](custom_to_language)?
+    - I need [Call me a taxi please](word_translate_query) translated from [english](custom_from_language) to [italian](custom_to_language).
+    - Please translate [I lost my wallet](word_translate_query) from [english](custom_from_language) to [portuguese](custom_to_language).
+    - Can you translate [I need a hotel for the night](word_translate_query) from [English](custom_from_language) to [German](custom_to_language)?
+    - Translate [Id like to order room service](word_translate_query) from [english](custom_from_language) to [dutch](custom_to_language).
+    - Could you help me translate [Where is the nearest pharmacy](word_translate_query) from [english](custom_from_language) to [russian](custom_to_language)?
+    - How to say [I have a fever](word_translate_query) in [swedish](custom_to_language) from [english](custom_from_language)?
+    - Please translate [I need to cancel my reservation](word_translate_query) from [english](custom_from_language) to [norwegian](custom_to_language).
+    - Can you translate [I'm looking for the embassy](word_translate_query) from [english](custom_from_language) into [finnish](custom_to_language)?
+    - How do you translate [I want to buy a SIM card](word_translate_query) from [Polish](custom_from_language) to [english](custom_to_language)?
+    - I need a translation of [I am allergic to shellfish](word_translate_query) from [english](custom_from_language) to [czech](custom_to_language).
+    - Translate [Can I have the menu please](word_translate_query) from [english](custom_from_language) to [turkish](custom_to_language).
+    - Can you interpret [I missed my bus](word_translate_query) from [english](custom_from_language) to [greek](custom_to_language)?
+    - I'd like [Can you recommend a good doctor](word_translate_query) translated from [english](custom_from_language) to [hebrew](custom_to_language).
+    - Could you translate [I need to charge my phone](word_translate_query) from [english](custom_from_language) to [arabic](custom_to_language)?
+    - Please translate [Where can I buy tickets](word_translate_query) from [english](custom_from_language) into [korean](custom_to_language).
+    - How do you say [I want to rent a car](word_translate_query) in [danish](custom_to_language) from [english](custom_from_language)?
+    - Translate [I need to book a flight](word_translate_query) from [english](custom_from_language) to [hungarian](custom_to_language).
+    - Could you convert [My luggage is missing](word_translate_query) from [english](custom_from_language) to [persian](custom_to_language)?
+    - How to translate [Can I pay by credit card](word_translate_query) from [english](custom_from_language) to [azerbaijani](custom_to_language)?
+    - Can you translate [Id like to make a phone call](word_translate_query) from [azerbaijani](custom_from_language) to [slovak](custom_to_language)?
+    - Please interpret [How far is the airport](word_translate_query) from [english](custom_from_language) to [Catalan](custom_to_language).
+    - Translate [I need to exchange money](word_translate_query) from [catalan](custom_from_language) to [indonesian](custom_to_language).
+    - How do you say [Is breakfast included](word_translate_query) in [chinese](custom_to_language) from [english](custom_from_language)?
+    - I need [Where is the subway station](word_translate_query) translated from [indonesian](custom_from_language) to [turkish](custom_to_language).
+    - Could you translate [Im here for business](word_translate_query) from [turkish](custom_from_language) to [english](custom_to_language)?
+    - Translate [Im thinking of extending my stay](word_translate_query) from [english](custom_from_language) to [polish](custom_to_language).
+    - Can you help me translate [Im interested in local cultural events](word_translate_query) from [english](custom_from_language) to [hindi](custom_to_language)?
+    - Whats [apple](word_translate_query) in [french](custom_to_language)?
+    - How do you say [I am happy](word_translate_query) in [japanese](custom_to_language)?
+    - Can you translate [good morning](word_translate_query) to [russian](custom_to_language)?
+    - How to write [cat](word_translate_query) in [arabic](custom_to_language)?
+    - Give me the [spanish](custom_to_language) term for [beautiful](word_translate_query).
+    - Give me the [spanish](custom_to_language) word for [beautiful](word_translate_query).
+    - How do you translate [apple](word_translate_query) from [french](custom_from_language)?
+    - What does [I am happy](word_translate_query) mean from [japanese](custom_from_language)?
+    - Translate [good morning](word_translate_query) from [german](custom_from_language).
+    - What is [beautiful](word_translate_query) from [russian](custom_from_language)?
+    - What does the [spanish](custom_from_language) word [beautiful](word_translate_query) translate to?
+    - What does the [German](custom_from_language) phrase [Guten Morgen](word_translate_query) mean?
+    - Can you interpret the [Chinese](custom_from_language) phrase [Im here for business](word_translate_query) for me?
+    - Translate the [Italian](custom_from_language) sentence [Dove la stazione](word_translate_query).
+    - How do you say [dog](word_translate_query) in [French](custom_to_language)?
+    - I need the [Russian](custom_to_language) term for [water](word_translate_query).
+    - Can you give me the [Spanish](custom_to_language) word for [juice](word_translate_query)?
+    - What is the [Dutch](custom_from_language) translation for [love](word_translate_query)?
+    - Could you translate [Where is the library](word_translate_query) from [English](custom_from_language) to [Korean](custom_to_language)?
+    - I need [Can we have the check please](word_translate_query) translated from [English](custom_from_language) to [Italian](custom_to_language).
+    - How do you say [I am a vegetarian](word_translate_query) in [Portuguese](custom_to_language) from [English](custom_from_language)?
+    - Please translate [How much does it cost](word_translate_query) from [English](custom_from_language) to [Danish](custom_to_language).
+    - What's the [japanese](custom_to_language) translation for [Thank you](word_translate_query)?
+    - Can you express [I need a doctor](word_translate_query) in [German](custom_to_language)?
+    - How would you write [beautiful](word_translate_query) in [arabic](custom_to_language)?
+    - can you tell me what [Where can I find a taxi](word_translate_query) is in [French](custom_to_language) from [English](custom_from_language).
+    - translate Its a [beautiful day](word_translate_query) to [swedish](custom_to_language) for me.
+    - How would you interpret [goodbye](word_translate_query) in [Hindi](custom_to_language)?
+    - translate [im thinking of staying](word_translate_query) in [Russian](custom_to_language) from [English](custom_from_language).
+    - Could you translate [happy birthday](word_translate_query) in [Dutch](custom_to_language) from [English](custom_from_language)?
+    - What is the [greek](custom_to_language) translation of [happy birthday](word_translate_query)?
+
+- regex: translate_words_keywords
+  examples: |
+    - translate|translation|phrase|word|words|mean
+
+- regex: word_translate_query
+  examples: |
+    - nonwords_flag|random

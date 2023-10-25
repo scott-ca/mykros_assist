@@ -61,4 +61,6 @@ stories:
   - action: action_compare_text
   - intent: convert_units
   - action: action_convert_units
+  - intent: translate_words
+  - action: action_translate_words
 

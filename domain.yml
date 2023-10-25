@@ -31,6 +31,7 @@ intents:
   - check_spelling
   - compare_text
   - convert_units
+  - translate_words
 
 actions:
   - action_debug
@@ -64,6 +65,7 @@ actions:
   - action_check_spelling
   - action_compare_text
   - action_convert_units
+  - action_translate_words
   
 entities:
   - create_file_path
@@ -111,6 +113,9 @@ entities:
   - unit_amount
   - from_unit
   - to_unit
+  - word_translate_query
+  - custom_from_language
+  - custom_to_language
 
 session_config:
   session_expiration_time: 60

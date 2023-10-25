@@ -25,8 +25,8 @@ confidence_factors:
 
 translation:
     enable: false  # Set to false to disable translation
-    input_intent_detection: false # Set to true for translation only to be used with intent and entity detection.
-    all_input: false #  Setting this to true will translate all input including input sent to custom_actions. This also overrides input_intent_detection and will translate all input.
-    all_output: false # Set this to true to have all output translated.
-    from_language: sk  # Source input language. Target output language.
+    input_intent_detection: true # Set to true for translation only to be used with intent and entity detection.
+    all_input: true #  Setting this to true will translate all input including input sent to custom_actions. This also overrides input_intent_detection and will translate all input.
+    all_output: true # Set this to true to have all output translated.
+    from_language: es  # Source input language. Target output language.
     to_language: en  # Target input language. Source output language.

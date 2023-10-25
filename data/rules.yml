@@ -146,3 +146,8 @@ rules:
   - intent: convert_units
   - action: action_convert_units
 
+- rule: Translate words
+  steps:
+  - intent: translate_words
+  - action: action_translate_words
+

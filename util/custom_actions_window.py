@@ -12,6 +12,10 @@ import shutil
 import logging
 import re
 
+import ast
+import sys
+import subprocess
+from importlib_metadata import distribution, Distribution, version
 
 class CustomActionsWindow(QMainWindow):
     def __init__(self, parent=None):
@@ -81,13 +85,13 @@ class CustomActionsWindow(QMainWindow):
         It will open a dialog box and accept a zip file with the files in the structure of where the files normally reside.
         """
 
-        # Step 1: Select and open the ZIP file
+        # Select and open the ZIP file
         import_path, _ = QFileDialog.getOpenFileName(self, "Select the custom action Zip file", "", "Zip files (*.zip)")
         if not import_path:
             QMessageBox.warning(self, "No File Selected", "No file was selected.")
             return
 
-        # Step 2: Extract to a temporary location
+        # Extract ZIP file to a temporary location
         temp_dir = tempfile.mkdtemp()
         with zipfile.ZipFile(import_path, 'r') as zip_ref:
             zip_ref.extractall(temp_dir)
@@ -177,9 +181,8 @@ class CustomActionsWindow(QMainWindow):
 
                         main_intent_stream.write(yaml_content)
 
-
             # Extracting new intent and action names after the merge
-            new_intent_names = list(updated_intents.keys())  # Extracting all the intent names
+            new_intent_names = list(updated_intents.keys())
 
             new_action_names = []
             for intent_data in updated_intents.values():
@@ -188,7 +191,7 @@ class CustomActionsWindow(QMainWindow):
                     if action_name not in new_action_names:
                         new_action_names.append(action_name)
 
-            # Define the paths for domain files
+            # Define the paths for domain file
             temp_domain_path = os.path.join(temp_dir, 'domain.yml')
             domain_path = os.path.join(project_base_path, 'domain.yml')
 
@@ -251,7 +254,6 @@ class CustomActionsWindow(QMainWindow):
                 ordered_keys = ["version", "intents", "actions", "entities", "session_config"]
                 ordered_domain_data = {key: domain_data[key] for key in ordered_keys if key in domain_data}
 
-
                 # Serialize each section separately, as you've done before
                 yaml_sections = []
                 for key in ordered_keys:
@@ -265,6 +267,15 @@ class CustomActionsWindow(QMainWindow):
                 with open(domain_path, 'w') as domain_stream:
                     domain_stream.write(full_yaml)
 
+                libraries_file_path = os.path.join(temp_dir, 'custom_action_libraries.txt')
+                if os.path.exists(libraries_file_path):
+                    missing_libraries = install_from_file(libraries_file_path)
+                    if missing_libraries:
+                        QMessageBox.warning(self, "Library Installation", "Failed to install the following libraries:\n\n" + '\n'.join(missing_libraries) + "\n\nYou might need to manually install them.")
+
+                    else:
+                        QMessageBox.information(self, "Library Installation", "All libraries were installed successfully.")
+                    
             # Clean up the temporary directory
             shutil.rmtree(temp_dir)
 
@@ -277,7 +288,6 @@ class CustomActionsWindow(QMainWindow):
             # Removing temp directory
             shutil.rmtree(temp_dir)
             QMessageBox.critical(self, "Import Failed", f"An error occurred during the import: {str(e)}")
-
 
     def export_custom_action(self):
         """
@@ -292,7 +302,6 @@ class CustomActionsWindow(QMainWindow):
             return
 
         # Variables for directories
-
         script_dir = os.path.dirname(os.path.realpath(__file__))
         base_action_dir = 'custom_actions'
         base_training_dir = 'data/nlu'
@@ -325,6 +334,8 @@ class CustomActionsWindow(QMainWindow):
                 folder_path = os.path.join(base_action_dir, folder, action_name)
                 if os.path.isdir(folder_path):
                     for file in os.listdir(folder_path):
+                        if "__pycache__" in file or "__pycache__" in folder_path:
+                            continue
                         file_path = os.path.join(folder_path, file)
                         action_files.add((file_path, os.path.relpath(file_path, base_action_dir)))
                     if action_files:
@@ -392,23 +403,76 @@ class CustomActionsWindow(QMainWindow):
                 if entity_name in all_related_entities:
                     domain_entity_data.append(entity_spec)
 
+        # Extracts the required non-standard libraries
+        all_imported_libraries = set()
+        for file_info in all_action_files:
+            file_path, _ = file_info
+            imported_libraries_for_file = imports_from_action(file_path)
+            all_imported_libraries.update(imported_libraries_for_file)
+
+        # List of known custom modules in the 'util' folder
+        custom_util_modules = [
+            "chat_prompt", "main_window", "translator", "custom_actions_window",
+            "misc", "rasa_model", "model", "restart_actions"
+        ]
+        
+        known_builtins = ['sys']
+        known_builtins.extend(['util', 'PySide2'])
+
+        # Filters libraries to remove any built-in or expected libraries
+        filtered_libraries = [
+            lib for lib in all_imported_libraries
+            if not is_standard_lib(lib)
+            and lib not in known_builtins
+            and "util." + lib not in custom_util_modules
+        ]
+
+        installed_libs = pip_list()
+
+        # Write the missing libraries to a custom_action_libraries.txt file
+        with tempfile.NamedTemporaryFile(mode='w+', delete=False) as temp_libs:
+            for lib in filtered_libraries:
+                found = False
+
+                # Directly match against installed packages
+                if lib in installed_libs:
+                    temp_libs.write(f"{lib}=={installed_libs[lib]}\n")
+                    found = True
+                else:
+                    # Check against top-level modules
+                    for installed_lib, version in installed_libs.items():
+                        if lib in top_level_modules_for_package(installed_lib):
+                            temp_libs.write(f"{installed_lib}=={version}\n")
+                            found = True
+                            break
+
+                if not found:
+                    temp_libs.write(f"# {lib} is not installed. Couldn't determine the version.\n")
+
+            temp_libs_path = temp_libs.name
+
+
         # After gathering all necessary files and configurations, proceeds with the ZIP creation
         try:
             export_name = "multiple_intents" if len(selected_rows) > 1 else intent_name
             export_path = QFileDialog.getSaveFileName(self, 'Save File', f"{export_name}.zip", "Zip files (*.zip)")
             if export_path[0]:
                 with zipfile.ZipFile(export_path[0], 'w') as export_zip:
+
+                    # Addes custom_action_libraries.txt to the ZIP file
+                    export_zip.write(temp_libs_path, 'custom_action_libraries.txt')
+
                     # Adding custom action script(s) and training data
                     for file_info in all_action_files:
                         file_path, rel_path = file_info
                         full_zip_action_path = os.path.join('custom_actions', rel_path)
                         export_zip.write(file_path, full_zip_action_path)
-
+                    # Adding custom action script(s) and training data
                     for data_info in all_training_data:
                         data_path, rel_path = data_info
                         full_zip_training_path = os.path.join('data', 'nlu', rel_path)
                         export_zip.write(data_path, full_zip_training_path)
-
+                    # Adding intent, action, and entities to the domain file
                     if domain_entity_data:
                         domain_content_str = yaml.dump({"entities": domain_entity_data}, default_flow_style=False, sort_keys=False)
                         with tempfile.NamedTemporaryFile(mode='w+', delete=False) as temp_domain:
@@ -794,3 +858,60 @@ class CustomActionsWindow(QMainWindow):
 
         # Update the table to reflect the change
         self.load_custom_actions()
+
+
+def imports_from_action(file_path):
+    """Extract all imported libraries from a Python file."""
+    with open(file_path, 'r') as file:
+        node = ast.parse(file.read())
+    
+    libraries = []
+    for item in ast.walk(node):
+        if isinstance(item, ast.Import):
+            for n in item.names:
+                libraries.append(n.name.split('.')[0])
+        elif isinstance(item, ast.ImportFrom):
+            libraries.append(item.module.split('.')[0])
+    
+    return list(set(libraries))
+
+def is_standard_lib(module_name):
+    try:
+        module = __import__(module_name)
+        return "lib" in module.__file__ and "site-packages" not in module.__file__
+    except Exception:
+        return False
+
+def pip_list():
+    installed_libraries = {}
+    result = subprocess.run(['pip', 'freeze'], capture_output=True, text=True)
+    for line in result.stdout.split('\n'):
+        if '==' in line:
+            lib, ver = line.split('==')
+            installed_libraries[lib] = ver
+    return installed_libraries
+
+
+def top_level_modules_for_package(package_name):
+    dist = distribution(package_name)
+    if dist and dist.read_text('top_level.txt'):
+        return list(dist.read_text('top_level.txt').splitlines())
+    return []
+
+
+def install_from_file(file_path):
+    """Install libraries from a requirements file and return a list of those that failed."""
+    with open(file_path, 'r') as file:
+        lines = file.readlines()
+
+    missing_libraries = []
+
+    for line in lines:
+        line = line.strip()
+        # Ignore commented lines
+        if not line.startswith("#"):
+            result = subprocess.run(['pip', 'install', line], capture_output=True, text=True)
+            if result.returncode != 0:  # if the return code is non-zero, installation failed
+                missing_libraries.append(line)
+
+    return missing_libraries
